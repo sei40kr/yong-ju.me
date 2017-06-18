@@ -19,6 +19,7 @@
   <meta property="og:image" content="{{ basePath }}/images/screenshot.png">
   <meta property="og:site_name" content="{{ siteName }}">
   <meta property="og:description" content="{{ siteDescription }}">
+  <meta property="fb:app_id" content="230926207424274">
   <title>{{ pageTitle }}</title>
   <link rel="stylesheet" href="{{ basePath }}/styles/main.css">
   {% block styleSheets %}{% endblock %}
