@@ -25,6 +25,11 @@
   {% block styleSheets %}{% endblock %}
 </head>
 <body>
+<header class="seo">
+  <h1>{{ siteName }}</h1>
+  <p>{{ siteDescription }}</p>
+</header>
+
 <div class="page">
   {% block beforeContent %}{% endblock %}
   {% block content %}{% endblock %}
