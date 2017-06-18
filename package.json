@@ -54,6 +54,8 @@
     "clean-deps": "rimraf node_modules",
     "start": "NODE_ENV=production gulp serve --production",
     "debug": "NODE_ENV=development gulp serve",
+    "lint": "gulp eslint",
+    "clean": "gulp clean",
     "build": "NODE_ENV=production gulp --production"
   },
   "engines": {
