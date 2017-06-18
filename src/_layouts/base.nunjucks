@@ -12,13 +12,13 @@
   <meta name="keywords" content="">
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="twitter:card" content="summarylargeimage">
   <meta property="og:title" content="{{ pageTitle }}">
   <meta property="og:type" content="website">
   <meta property="og:url" content="{{ basePath }}">
   <meta property="og:image" content="{{ basePath }}/images/screenshot.png">
   <meta property="og:site_name" content="{{ siteName }}">
   <meta property="og:description" content="{{ siteDescription }}">
-  <meta property="twitter:summary" content="summarylargeimage">
   <title>{{ pageTitle }}</title>
   <link rel="stylesheet" href="{{ basePath }}/styles/main.css">
   {% block styleSheets %}{% endblock %}
