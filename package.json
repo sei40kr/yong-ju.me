@@ -66,6 +66,16 @@
     "port": "3000",
     "baseUrl": ".",
     "remoteBaseUrl": "https://yong-ju.me",
+    "siteName": "成 英柱",
+    "siteKeywords": [
+      "成 英柱",
+      "Seong Yong-ju",
+      "エンジニア",
+      "ポートフォリオ",
+      "Webエンジニア",
+      "ソフトウェアエンジニア"
+    ],
+    "siteDescription": "Webエンジニア/ソフトウェアエンジニアである成 英柱のポートフォリオWebサイト",
     "directories": {
       "source": "src",
       "destination": "public",

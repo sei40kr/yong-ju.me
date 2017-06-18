@@ -1,33 +1,31 @@
 {% block config -%}
-  {% set basePath = config.baseUrl if debug else config.remoteBaseUrl -%}
-  {% set siteName = site.data.profile.name -%}
-  {% set siteDescription = '' -%}
-  {% set pageTitle = siteName + ' | ' + (site.data.profile.roles | join('/')) -%}
+  {% set baseUrl = config.baseUrl if debug else config.remoteBaseUrl -%}
+  {% set pageTitle = config.siteName -%}
 {% endblock -%}
 <!doctype html>
 <html>
 <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#">
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <meta name="keywords" content="">
-  <meta name="description" content="">
+  <meta name="keywords" content="{{ config.siteKeywords | join(',') }}">
+  <meta name="description" content="{{ config.siteDescription }}">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="twitter:card" content="summarylargeimage">
   <meta property="og:title" content="{{ pageTitle }}">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="{{ basePath }}">
-  <meta property="og:image" content="{{ basePath }}/images/screenshot.png">
-  <meta property="og:site_name" content="{{ siteName }}">
-  <meta property="og:description" content="{{ siteDescription }}">
+  <meta property="og:url" content="{{ baseUrl }}">
+  <meta property="og:image" content="{{ baseUrl }}/images/screenshot.png">
+  <meta property="og:site_name" content="{{ config.siteName }}">
+  <meta property="og:description" content="{{ config.siteDescription }}">
   <meta property="fb:app_id" content="230926207424274">
   <title>{{ pageTitle }}</title>
-  <link rel="stylesheet" href="{{ basePath }}/styles/main.css">
+  <link rel="stylesheet" href="{{ baseUrl }}/styles/main.css">
   {% block styleSheets %}{% endblock %}
 </head>
 <body>
 <header class="seo">
-  <h1>{{ siteName }}</h1>
-  <p>{{ siteDescription }}</p>
+  <h1>{{ pageTitle }}</h1>
+  <p>{{ config.siteDescription }}</p>
 </header>
 
 <div class="page">
@@ -36,7 +34,7 @@
   {% block afterContent %}{% endblock %}
 </div>
 
-<script src="{{ basePath }}/scripts/main.js"></script>
+<script src="{{ baseUrl }}/scripts/main.js"></script>
 <script src="https://use.typekit.net/wbi1bro.js"></script>
 <script>try{Typekit.load({ async: true });}catch(e){}</script>
 {% block scripts %}{% endblock %}
