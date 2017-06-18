@@ -1,0 +1,26 @@
+@import 'node_modules/normalize.css/normalize';
+@import 'node_modules/aos/src/sass/aos';
+@import 'banner/banner';
+@import 'section/section';
+@import 'career-history/career-history';
+@import 'skill/skill';
+@import 'footer/footer';
+
+* {
+  box-sizing: border-box;
+
+  &::selection {
+    background: fade_in(#dca, 0.6);
+    color: #fff;
+  }
+}
+
+html {
+  font-family: "kozuka-gothic-pro", sans-serif;
+  line-height: 1.6;
+}
+body {
+  background: #fff;
+  color: #333;
+}
+

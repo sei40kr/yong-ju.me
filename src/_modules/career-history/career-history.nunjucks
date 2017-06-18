@@ -1,0 +1,16 @@
+{% macro career_history_item(title, content, date) -%}
+  <div class="career-history__item" data-aos="fade">
+    <div class="career-history__item__vert-line"></div>
+    <div class="career-history__item__pin"></div>
+    <div class="career-history__item__body-bubble"></div>
+    <div class="career-history__item__body">
+      <div class="career-history__item__date">
+        {{ date | date('Y年M月') }}
+      </div>
+      <div class="career-history__item__title">{{ title }}</div>
+      {% if content -%}
+        <div class="career-history__item__content">{{ content }}</div>
+      {%- endif %}
+    </div>
+  </div>
+{%- endmacro %}

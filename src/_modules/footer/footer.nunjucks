@@ -1,0 +1,7 @@
+<footer class="footer">
+  <p class="footer__copyright">&copy; 2017 Seong Yong-ju.</p>
+  <p class="footer__license">
+    The social icon webfont by <a href="http://www.socicon.com/">socicon</a>, released under the OFL 1.1.<br> The
+    animation framework by <a href="http://michalsnik.github.io/aos/" title="AOS - Animate On Scroll Library">AOS</a>,
+    released under the MIT license. </p>
+</footer>

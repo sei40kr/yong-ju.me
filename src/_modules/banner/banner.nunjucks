@@ -1,0 +1,13 @@
+<div class="banner">
+  <div class="banner__profile" data-aos="fade" data-aos-once="true">
+    <div class="banner__profile__name">{{ site.data.profile.name }}</div>
+    <div class="banner__profile__description">{{ site.data.profile.roles | join('/') }}</div>
+    <div class="banner__profile__social">
+      <a href="https://www.linkedin.com/in/%E8%8B%B1%E6%9F%B1-%E6%88%90-078672141/" target="_blank" title="LinkedIn"
+        class="banner__profile__social__button"><i class="socicon-linkedin"></i></a> <a
+        href="https://github.com/sei40kr" target="_blank" title="GitHub" class="banner__profile__social__button"><i
+          class="socicon-github"></i></a> <a href="https://www.hackerrank.com/" target="_blank" title="HackerRank"
+        class="banner__profile__social__button"><i class="socicon-hackerrank"></i></a>
+    </div>
+  </div>
+</div>

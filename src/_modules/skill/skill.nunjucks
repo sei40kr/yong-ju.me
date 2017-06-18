@@ -1,0 +1,13 @@
+{% macro skill_item(name, progress) -%}
+  <div class="skill__item">
+    <div class="skill__item__info">
+      <div class="skill__item__name">{{ name }}</div>
+      <div class="skill__item__progress">{{ progress }} %</div>
+    </div>
+    <div class="skill__item__progress-bar">
+      <div class="skill__item__progress-bar__bg">
+        <div class="skill__item__progress-bar__fg" style="width: {{ progress }}%" data-aos="progress"></div>
+      </div>
+    </div>
+  </div>
+{%- endmacro %}
