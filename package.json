@@ -1,5 +1,5 @@
 {
-  "name": "sei40kr.gitlab.io",
+  "name": "gh-pages",
   "version": "1.0.0",
   "dependencies": {
     "aos": "^2.1.1",
@@ -78,7 +78,7 @@
     "siteDescription": "Webエンジニア/ソフトウェアエンジニアである成 英柱のポートフォリオWebサイト",
     "directories": {
       "source": "src",
-      "destination": "public",
+      "destination": "build",
       "temporary": "tmp",
       "modules": "_modules",
       "layouts": "_layouts",

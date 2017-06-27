@@ -1,7 +1,7 @@
 {
   "generator-yeogurt": {
     "config": {
-      "projectName": "sei40kr.gitlab.io",
+      "projectName": "gh-pages",
       "htmlOption": "nunjucks",
       "jsPreprocessor": "es6",
       "cssOption": "sass",
