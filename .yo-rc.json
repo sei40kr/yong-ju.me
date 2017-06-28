@@ -1,7 +1,7 @@
 {
   "generator-yeogurt": {
     "config": {
-      "projectName": "gh-pages",
+      "projectName": "yong-ju.me",
       "htmlOption": "nunjucks",
       "jsPreprocessor": "es6",
       "cssOption": "sass",
