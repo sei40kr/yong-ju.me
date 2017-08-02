@@ -52,7 +52,7 @@
   },
   "scripts": {
     "clean-deps": "rimraf node_modules",
-    "start": "NODE_ENV=production gulp serve --production",
+    "start": "NODE_ENV=development gulp serve --production",
     "debug": "NODE_ENV=development gulp serve",
     "lint": "gulp eslint",
     "clean": "gulp clean",
