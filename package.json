@@ -78,7 +78,7 @@
     "siteDescription": "Webエンジニア/ソフトウェアエンジニアである成 英柱のポートフォリオWebサイト",
     "directories": {
       "source": "src",
-      "destination": "build",
+      "destination": "public",
       "temporary": "tmp",
       "modules": "_modules",
       "layouts": "_layouts",
