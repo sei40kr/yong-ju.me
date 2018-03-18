@@ -36,6 +36,6 @@
     "lint": "stylelint 'src/**/*.scss' && tslint src/**/*.{ts,tsx}",
     "format": "prettier --write 'gatsby-config.js' 'src/**/*.{scss,ts,tsx}' && stylelint --fix 'src/**/*.scss' && tslint --fix 'src/**/*.{ts,tsx}'",
     "test": "echo 'Error: no test specified'",
-    "pre-commit": "lint-staged"
+    "precommit": "lint-staged"
   }
 }
