@@ -13,10 +13,12 @@ install:
   - yarn
 
 
-before_deploy:
+script:
   - yarn run build
 
+
 deploy:
+  skip_cleanup: true
   provider: firebase
   token:
     secure: 'evaarYdT3Vn0akB+V8XxNBb8tkzc7bkrb9d11fPU4BF2naOsI436p1jIECexNQFw0SLCgsviB+oGt+CGAIEBdtwPALAiT9KTita5Tk8Dd6IfO7o2X2RvLif034XjckaMnJpbRqkx8/BRSrn8HWmtB9OlUC607LFOBQUCCwGL0TF/991ajDcUn4XaG6EvayUKwv+t6yPUle1K1eZZ64+KCoZnyQpClHPnYa2pHmyhuyo1t6LUzpxD05z6R9NIkKtWgVhzf7W9A+yBs4gdiIwXP2Ls+pmpszS5RTR6b6roL8h4bMLIEyQSqBjy6qRDfE8s0h/mJFoEYs0CFyd4knhj+ZALmT8XFak9ZPB8Vba0TEiDpMwUFaxhlrhOzQBACk29TbsZqbpyh6LwP22zTBNG5PgodO+U6Hq5K1dNRcCmVzZrmBfkdiqTKSBAhu4tGfIS7WOUzSM8wLH1byXGOIQHVFLzASAA482EX5OWm5cy9gfq14qUUgRES/VtkiMVK/8tblSPFtWBOzF2r5e11/5pAqmL+nwUPW4gM5G9sxohzoj6Hcez8J0TQri9zQd2KCzVu13vTXIO1yX4ZbMovrWUfDPFFtm09Hn/M974XESn7Sm0EL23Xf4CGuAqsafTY6+lMLtQb841yMjqMe3+TvJHDoG6JZY0l/H+jbPaG8toSnU='
