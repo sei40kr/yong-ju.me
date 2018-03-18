@@ -1,0 +1,20 @@
+.orig-jumbotron {
+  height: 360px;
+  margin: 0;
+  background-image: url('./bg.png');
+  background-size: cover;
+  border-radius: 0;
+}
+
+.orig-jumbotron-profile {
+  color: #fff;
+  text-shadow: 0 0 8px rgba(0, 0, 0, 0.8);
+
+  &__name {
+    font-size: 2.4rem;
+  }
+
+  &__message {
+    font-size: 1.2rem;
+  }
+}
