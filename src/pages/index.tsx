@@ -1,3 +1,4 @@
+import Img from 'gatsby-image';
 import Link from 'gatsby-link';
 import * as React from 'react';
 
@@ -26,6 +27,7 @@ export interface IProps {
         skillGroups: ISkillGroup[];
       };
     };
+    jumbotronBackgroundImage: object;
   };
 }
 
@@ -80,6 +82,7 @@ class IndexPage extends React.Component<IProps> {
         <Jumbotron
           name={this.props.data.site.siteMetadata.profile.name}
           message={this.props.data.site.siteMetadata.profile.message}
+          backgroundImage={this.props.data.jumbotronBackgroundImage}
         />
         <Main>
           {this.renderExperiences()}
@@ -102,17 +105,14 @@ export const pageQuery = graphql`
       siteMetadata {
         copyrighter
         copyrightYears
-
         profile {
           name
           message
         }
-
         experiences {
           title
           date
         }
-
         skillGroups {
           title
           secondaryTitle
@@ -121,6 +121,12 @@ export const pageQuery = graphql`
             progress
           }
         }
+      }
+    }
+
+    jumbotronBackgroundImage: imageSharp(id: { regex: "/jumbotron-bg.png/" }) {
+      sizes {
+        ...GatsbyImageSharpSizes
       }
     }
   }
