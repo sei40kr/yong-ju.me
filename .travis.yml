@@ -10,9 +10,8 @@ install:
   - yarn
 
 
-script:
+before_deploy:
   - yarn run build
-
 
 deploy:
   provider: firebase
