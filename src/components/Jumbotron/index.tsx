@@ -10,19 +10,12 @@ export interface IProps {
 }
 
 const Jumbotron = (props: IProps) => (
-  <div className="jumbotron-container">
-    <Img
-      {...props.backgroundImage}
-      className="jumbotron-bg"
-      outerWrapperClassName="jumbotron-bg__img"
-      position="absolute"
-    />
-    <div className="mb-0 jumbotron orig-jumbotron">
-      <div className="container text-center">
-        <div className="orig-jumbotron-profile">
-          <h1 className="orig-jumbotron-profile__name">{props.name}</h1>
-          <p className="orig-jumbotron-profile__message">{props.message}</p>
-        </div>
+  <div className="orig-jumbotron-container">
+    <Img {...props.backgroundImage} className="orig-jumbotron-bg" />
+    <div className="orig-jumbotron">
+      <div className="text-center orig-jumbotron-profile">
+        <h1 className="orig-jumbotron-profile__name">{props.name}</h1>
+        <p className="orig-jumbotron-profile__message">{props.message}</p>
       </div>
     </div>
   </div>
