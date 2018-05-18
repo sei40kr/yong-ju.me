@@ -32,7 +32,7 @@ export interface IProps {
 }
 
 class IndexPage extends React.Component<IProps> {
-  public renderExperiences() {
+  private renderExperiences() {
     return (
       <Section title="経歴" secondaryTitle="Experiences" bgColor="light-gray">
         <div className="container py-5">
@@ -50,7 +50,7 @@ class IndexPage extends React.Component<IProps> {
     );
   }
 
-  public renderSkillGroups() {
+  private renderSkillGroups() {
     return (
       <Section title="スキル" secondaryTitle="Skills" bgColor="white">
         <div className="container py-4">
