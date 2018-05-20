@@ -125,7 +125,7 @@ export const pageQuery = graphql`
     }
 
     jumbotronBackgroundImage: imageSharp(id: { regex: "/jumbotron-bg.png/" }) {
-      sizes {
+      sizes(quality: 90) {
         ...GatsbyImageSharpSizes
       }
     }
