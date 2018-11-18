@@ -1,0 +1,45 @@
+.jumbotron {
+  display: flex;
+  height: 480px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: fixed #114488 url('../assets/img/jumbotron-bg.png');
+
+  &__avatar {
+    margin: 0 0 16px 0;
+  }
+  &__avatar-img {
+    border-radius: 100%;
+  }
+
+  &__name-text,
+  &__role-text {
+    display: inline-block;
+    padding: 0 4px;
+    background: #fff;
+  }
+  &__name {
+    margin: 0 0 4px 0;
+  }
+  &__name-text {
+    font-family: 'Roboto Slab', serif;
+    font-size: 24px;
+  }
+  &__role {
+    margin: 0 0 16px 0;
+  }
+  &__role-text {
+    font-family: 'Roboto Slab', serif;
+    font-size: 20px;
+  }
+
+  &__introduction {
+    margin: 0 0 64px 0;
+    color: #fff;
+    font-family: 'Roboto Slab', serif;
+    font-size: 18px;
+    font-weight: 300;
+    text-align: center;
+  }
+}

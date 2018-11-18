@@ -1,22 +1,15 @@
 language: node_js
 node_js:
-  - 8.10.0
+  - 10.14.1
 cache: yarn
-
 branches:
   only: master
 git:
   depth: 1
-
-
 install:
   - yarn
-
-
 script:
   - yarn run build
-
-
 deploy:
   skip_cleanup: true
   provider: firebase

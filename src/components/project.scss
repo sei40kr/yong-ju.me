@@ -1,0 +1,58 @@
+.project {
+  padding: 0 0 4px 0;
+  margin: 0 0 32px 0;
+
+  &__header {
+    padding: 12px 32px 16px 32px;
+    margin: 0 0 16px 0;
+    border-radius: 6px 6px 0 0;
+    color: #fff;
+  }
+  &__period {
+    margin: 0 0 8px 0;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 16px;
+    text-align: right;
+  }
+
+  &__name {
+    margin: 0 0 4px 0;
+    font-size: 24px;
+    font-weight: 700;
+  }
+  &__company-and-role {
+    font-size: 16px;
+  }
+
+  &__content {
+    padding: 0 32px;
+  }
+
+  &__description {
+    margin: 0 0 16px 0;
+    font-size: 16px;
+  }
+
+  &__accomplishments {
+    margin: 0 0 16px 0;
+  }
+  &__accomplishments-title {
+    margin: 0 0 4px 0;
+    color: #616161;
+    font-family: Montserrat, sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+  &__accomplishment-item {
+    font-size: 16px;
+  }
+  &__accomplishment-item::before {
+    display: inline-block;
+    width: 32px;
+    margin: 0 0 0 -32px;
+    color: #616161;
+    content: '・';
+    text-align: right;
+  }
+}

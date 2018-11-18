@@ -1,243 +1,223 @@
 module.exports = {
   siteMetadata: {
-    siteUrl: 'https://yong-ju.me',
-    title: '成 英柱',
-    keywords: [
-      '成 英柱',
-      'Seong Yong-ju',
-      'エンジニア',
-      'ポートフォリオ',
-      'Webエンジニア',
-      'ソフトウェアエンジニア',
+    siteName: 'Seong Yong-ju | Software Engineer/Systems Architect',
+    skills: [
+      {
+        name: 'Software Engineering',
+        progress: 'advanced',
+        abilities: [
+          { content: 'Understand SOLID principles' },
+          {
+            content:
+              'Understand general data structures: Array, Linked List, Hash Map, Binary Heap, Segment Tree',
+          },
+          { content: 'Understand general sort algorithms, search algorithms' },
+          {
+            content: 'Analyze the time and space complexity of an algorithm',
+          },
+          {
+            content: 'Design testable implementations by removing side-effects',
+          },
+        ],
+        experiences: [],
+      },
+      {
+        name: 'Frontend Engineering',
+        progress: 'advanced',
+        abilities: [
+          { content: 'Design an webapp in MVC pattern' },
+          { content: 'Understand the lifecycle of React component' },
+          { content: 'Design an application state in Flux, Redux' },
+          { content: 'Understand HTTP' },
+        ],
+        experiences: [
+          { content: 'Develop apps using Closure Library, React at work' },
+          { content: 'Create this portfolio' },
+          { content: 'Create hybrid apps using Cordova&Ionic/Onsen UI' },
+          { content: 'Create browser games using Phaser' },
+          {
+            content:
+              'Read most parts of Prototype.js, Script.aculo.us, Zepto.js, CreateJS, Hyperapp',
+          },
+        ],
+      },
+      {
+        name: 'Java',
+        progress: 'advanced',
+        abilities: [
+          { content: 'Understand how general GC algotirhm works' },
+          { content: 'Understand how Spring DI works' },
+          { content: 'Develop an webapp using Spring MVC' },
+          { content: 'Design an application in model driven' },
+          { content: 'Implement a distributed batch using Spark' },
+        ],
+        experiences: [
+          { content: 'Develop webapps using Spring MVC at work' },
+          { content: 'Develop a distributed batch using Spark at work' },
+          {
+            content: 'Join a open-sourced game server development of a MMORPG',
+          },
+        ],
+      },
+      {
+        name: 'Database Engineering',
+        progress: 'intermediate',
+        abilities: [
+          { content: 'Understand CAP theorem' },
+          {
+            content:
+              'Understand general DB architectures: Master-Slave, Multi Masters, Consistent Hashing',
+          },
+          {
+            content: 'Understand general DB indexes: Binary Tree, Hash',
+          },
+          { content: 'Design a table schema and relationships' },
+          {
+            content:
+              'Optimize an execution plan and improve the query performance: Join methods, Partitioning, Padding Factor',
+          },
+        ],
+        experiences: [
+          { content: 'Improve query performance in PostgreSQL, Oracle' },
+          { content: 'Create a trigger function to pool the update logs' },
+          { content: 'Solve HackerRank, LeetCode problems' },
+        ],
+      },
+      {
+        name: 'C',
+        progress: 'intermediate',
+        abilities: [
+          { content: 'Create simple tools' },
+          { content: 'Understand how memory heap and stack work' },
+        ],
+        experiences: [
+          { content: 'Implement popular algorithms' },
+          { content: 'Solve AtCoder, LeetCode problems' },
+        ],
+      },
+      {
+        name: 'Rust',
+        progress: 'beginner',
+        abilities: [{ content: 'Create simple tools' }],
+        experiences: [
+          { content: 'Implement popular algorithms' },
+          { content: 'Solve AtCoder problems' },
+        ],
+      },
+      {
+        name: 'Ruby',
+        progress: 'beginner',
+        abilities: [],
+        experiences: [
+          { content: 'Create RPG Maker VX extensions' },
+          { content: 'Read most parts of RGSS2' },
+        ],
+      },
+      {
+        name: 'PHP',
+        progress: 'beginner',
+        abilities: [],
+        experiences: [
+          {
+            content:
+              'Create access counters, guest books, simple blog systems from scratch',
+          },
+          { content: 'Create FFAPHP extensions' },
+          { content: 'Read the authentication part in WordPress' },
+        ],
+      },
+      {
+        name: 'Shell Script',
+        progress: 'intermediate',
+        abilities: [
+          {
+            content: 'Create useful tools using POSIX-compatible shell script',
+          },
+        ],
+        experiences: [{ content: 'Customize my shell environment' }],
+      },
+      {
+        name: 'Emacs Lisp',
+        progress: 'intermediate',
+        abilities: [],
+        experiences: [
+          { content: 'Contribute to Spacemacs' },
+          { content: 'Customize my Emacs environment' },
+        ],
+      },
     ],
-    description:
-      'Webエンジニア/ソフトウェアエンジニアである成 英柱のポートフォリオWebサイト',
-    copyrightYears: '2017-2018',
-    copyrighter: 'Seong Yong-ju',
-
-    profile: {
-      name: '成 英柱',
-      message: 'Web開発/ソフトウェアエンジニアリング',
-    },
-
-    experiences: [
+    projects: [
       {
-        title: 'ペガジャパン株式会社に入社しました',
-        date: '2018-07-17',
+        startYYYYMM: '201811',
+        endYYYYMM: null,
+        name: 'Financial System',
+        company: 'Pega Japan K.K.',
+        workRole: 'Systems Architect',
+        themeColor: '#15183f',
+        description: 'Developing some subsystems of a financial system.',
+        accomplishments: [],
       },
       {
-        title: '株式会社チームスピリットを退職しました',
-        date: '2018-06-27',
+        startYYYYMM: '201709',
+        endYYYYMM: '201806',
+        name: 'WSP Development',
+        company: 'TeamSpirit Inc.',
+        workRole: 'Frontend Engineer',
+        themeColor: '#107cad',
+        description: 'Developing a new attendance system product.',
+        accomplishments: [
+          { content: 'Setup a type checker for the project' },
+          { content: 'Maintain frontend coding conventions' },
+        ],
       },
       {
-        title: '株式会社チームスピリットに入社しました',
-        date: '2017-09-01',
+        startYYYYMM: '201702',
+        endYYYYMM: '201704',
+        name: 'Developer Tools Development',
+        company: 'Works Applications Co., Ltd.',
+        workRole: 'Engineer',
+        themeColor: '#20334c',
+        description:
+          "Domestic tools to improve product developers' productivity.",
+        accomplishments: [],
       },
       {
-        title: '株式会社ワークスアプリケーションズを退職しました',
-        date: '2017-04-01',
-      },
-      {
-        title: '株式会社ワークスアプリケーションズに入社しました',
-        date: '2016-04-01',
-      },
-      {
-        title: '山口大学を中退しました',
-        date: '2015-12-01',
-      },
-    ],
-    skillGroups: [
-      {
-        title: '言語',
-        secondaryTitle: 'Languages',
-        items: [
+        startYYYYMM: '201610',
+        endYYYYMM: '201701',
+        name: 'Datasync Framework Development',
+        company: 'Works Applications Co., Ltd.',
+        workRole: 'Frontend Engineer & Backend Engineer & DB Engineer',
+        themeColor: '#20334c',
+        description:
+          'A domestic framework to sync data between RDB and Cassandra.',
+        accomplishments: [
+          { content: 'Create a testing tool for product developers' },
           {
-            name: 'HTML/CSS/LESS/SCSS',
-            progress: 90,
-          },
-          {
-            name: 'JavaScript/Babel/TypeScript',
-            progress: 90,
-          },
-          {
-            name: 'Linux Shell',
-            progress: 60,
-          },
-          {
-            name: 'C',
-            progress: 40,
-          },
-          {
-            name: 'Go',
-            progress: 30,
-          },
-          {
-            name: 'Java',
-            progress: 80,
-          },
-          {
-            name: 'PHP',
-            progress: 60,
-          },
-          {
-            name: 'Ruby',
-            progress: 50,
-          },
-          {
-            name: 'VimScript',
-            progress: 10,
+            content:
+              'Create a data dumping feature to reproduce data-related issues',
           },
         ],
       },
       {
-        title: 'ライブラリ & フレームワーク & ミドルウェア',
-        secondaryTitle: 'Libraries & Frameworks & Middlewares',
-        items: [
-          {
-            name: 'Closure Library',
-            progress: 30,
-          },
-          {
-            name: 'jQuery',
-            progress: 80,
-          },
-          {
-            name: 'Bootstrap',
-            progress: 80,
-          },
-          {
-            name: 'AngularJS 1/2',
-            progress: 70,
-          },
-          {
-            name: 'Vue.js',
-            progress: 40,
-          },
-          {
-            name: 'Phaser',
-            progress: 60,
-          },
-          {
-            name: 'Mocha',
-            progress: 90,
-          },
-          {
-            name: 'Cordova/Ionic',
-            progress: 40,
-          },
-          {
-            name: 'Electron',
-            progress: 60,
-          },
-          {
-            name: 'Thymeleaf',
-            progress: 70,
-          },
-          {
-            name: 'JUnit',
-            progress: 60,
-          },
-          {
-            name: 'Spring MVC',
-            progress: 70,
-          },
-          {
-            name: 'Spring Boot',
-            progress: 60,
-          },
-          {
-            name: 'Spark',
-            progress: 30,
-          },
-          {
-            name: 'RSpec',
-            progress: 20,
-          },
-          {
-            name: 'Rails',
-            progress: 30,
-          },
-          {
-            name: 'MySQL/MariaDB',
-            progress: 20,
-          },
-          {
-            name: 'PostgreSQL/PL/pgSQL',
-            progress: 60,
-          },
-          {
-            name: 'Cassandra',
-            progress: 40,
-          },
-          {
-            name: 'Redis',
-            progress: 60,
-          },
-        ],
-      },
-      {
-        title: '開発環境',
-        secondaryTitle: 'Environments',
-        items: [
-          {
-            name: 'Windows',
-            progress: 70,
-          },
-          {
-            name: 'macOS',
-            progress: 60,
-          },
-          {
-            name: 'Debian Linux',
-            progress: 60,
-          },
-          {
-            name: 'Emmet',
-            progress: 90,
-          },
-          {
-            name: 'Git',
-            progress: 80,
-          },
-          {
-            name: 'Grunt',
-            progress: 40,
-          },
-          {
-            name: 'gulp.js',
-            progress: 90,
-          },
-          {
-            name: 'webpack',
-            progress: 20,
-          },
-          {
-            name: 'Maven',
-            progress: 50,
-          },
-          {
-            name: 'Travis CI',
-            progress: 60,
-          },
-          {
-            name: 'GitLab CI',
-            progress: 40,
-          },
-        ],
+        startYYYYMM: '201608',
+        endYYYYMM: '201609',
+        name: 'HUE Product Prototyping',
+        company: 'Works Applications Co., Ltd.',
+        workRole: 'Frontend Engineer',
+        themeColor: '#20334c',
+        description: 'Creating a prototype for a Onboarding system product. ',
+        accomplishments: [],
       },
     ],
   },
   plugins: [
     'gatsby-plugin-sass',
     'gatsby-plugin-typescript',
-    'gatsby-plugin-react-helmet',
-    'gatsby-transformer-sharp',
-    'gatsby-plugin-sharp',
     {
-      resolve: 'gatsby-source-filesystem',
+      resolve: 'gatsby-plugin-typography',
       options: {
-        path: `${__dirname}/src/images`,
-        name: 'images',
+        pathToConfigModule: 'src/utils/typography.js',
+        omitGoogleFont: false,
       },
     },
   ],
