@@ -1,0 +1,13 @@
+#+TITLE: yong-ju.me
+
+My portfolio website: https://yong-ju.me
+
+* Used Languages & Frameworks
+
+  - [[https://www.typescriptlang.org/][TypeScript]] & [[https://sass-lang.com/][Sass (SCSS)]]
+  - [[https://palantir.github.io/tslint/][TSLint]] & [[https://stylelint.io/][stylelint]] & [[https://prettier.io/][Prettier]]
+  - [[https://www.gatsbyjs.org/][GatsbyJS]]
+  - [[https://kyleamathews.github.io/typography.js/][Typography.js]]
+  - [[https://storybook.js.org/][Storybook]]
+  - [[https://travis-ci.com/][Travis CI]]
+  - [[https://firebase.google.com/docs/hosting/?hl=ja][Firebase Hosting]]
