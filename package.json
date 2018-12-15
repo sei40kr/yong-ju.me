@@ -44,7 +44,10 @@
     "@types/storybook__react": "^4.0.0",
     "awesome-typescript-loader": "^5.2.1",
     "babel-loader": "^8.0.4",
+    "husky": "^1.2.1",
     "node-sass": "^4.10.0",
+    "prettier": "^1.15.3",
+    "pretty-quick": "^1.8.0",
     "react-docgen-typescript-loader": "^3.0.0",
     "react-docgen-typescript-webpack-plugin": "^1.1.0",
     "stylelint": "^9.8.0",
@@ -55,5 +58,10 @@
     "tslint-config-prettier": "^1.13.0",
     "tslint-react": "^3.6.0",
     "typescript": "^3.2.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
   }
 }
