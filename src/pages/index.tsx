@@ -1,5 +1,6 @@
 import { graphql } from 'gatsby';
 import * as React from 'react';
+import { Helmet } from 'react-helmet';
 import Jumbotron from '../components/jumbotron';
 import Project from '../components/project';
 import Section from '../components/section';
@@ -27,6 +28,7 @@ interface SkillModel {
 interface IndexPageProps {
   data: {
     site: {
+      siteName: string;
       siteMetadata: {
         skills: SkillModel[];
         projects: ProjectModel[];
@@ -41,6 +43,7 @@ export const pageQuery = graphql`
   query {
     site {
       siteMetadata {
+        siteName
         skills {
           name
           progress
@@ -71,15 +74,20 @@ export const pageQuery = graphql`
 export default class IndexPage extends React.Component<IndexPageProps, {}> {
   public render() {
     return (
-      <div className="index-page">
-        <Jumbotron />
-        <Section title="Skills">
-          {this.renderSkills(this.props.data.site.siteMetadata.skills)}
-        </Section>
-        <Section title="Projects">
-          {this.renderProjects(this.props.data.site.siteMetadata.projects)}
-        </Section>
-      </div>
+      <>
+        <Helmet>
+          <title>{this.props.data.site.siteMetadata.siteName}</title>
+        </Helmet>
+        <div className="index-page">
+          <Jumbotron />
+          <Section title="Skills">
+            {this.renderSkills(this.props.data.site.siteMetadata.skills)}
+          </Section>
+          <Section title="Projects">
+            {this.renderProjects(this.props.data.site.siteMetadata.projects)}
+          </Section>
+        </div>
+      </>
     );
   }
 
