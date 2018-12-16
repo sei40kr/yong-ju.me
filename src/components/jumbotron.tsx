@@ -29,6 +29,28 @@ export class Jumbotron extends React.Component<{}, {}> {
             and have extensive experience in engineering.
           </p>
         </section>
+        <section className="jumbotron__sns-links">
+          <ul className="jumbotron__sns-link-list">
+            <li className="jumbotron__sns-link-item">
+              <a
+                href="https://www.linkedin.com/in/sei40kr/"
+                title="LinkedIn"
+                className="jumbotron__sns-link"
+              >
+                LinkedIn
+              </a>
+            </li>
+            <li className="jumbotron__sns-link-item">
+              <a
+                href="https://github.com/sei40kr"
+                title="GitHub"
+                className="jumbotron__sns-link"
+              >
+                GitHub
+              </a>
+            </li>
+          </ul>
+        </section>
       </header>
     );
   }

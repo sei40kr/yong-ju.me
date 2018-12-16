@@ -16,30 +16,53 @@
   &__name-text,
   &__role-text {
     display: inline-block;
-    padding: 0 4px;
     background: #fff;
   }
   &__name {
-    margin: 0 0 4px 0;
+    margin: 0 0 3px 0;
   }
   &__name-text {
+    padding: 0 4px;
     font-family: 'Roboto Slab', serif;
-    font-size: 24px;
+    font-size: 42px;
   }
   &__role {
     margin: 0 0 16px 0;
   }
   &__role-text {
+    padding: 0 8px;
     font-family: 'Roboto Slab', serif;
-    font-size: 20px;
+    font-size: 24px;
   }
 
   &__introduction {
-    margin: 0 0 64px 0;
+    margin: 0 0 20px 0;
     color: #fff;
     font-family: 'Roboto Slab', serif;
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 300;
     text-align: center;
+  }
+
+  &__sns-link-list {
+    display: flex;
+  }
+  &__sns-link-item {
+    padding: 0 16px;
+    border-right: 1px solid rgba(255, 255, 255, 0.3);
+    font-family: Montserrat, sans-serif;
+    font-size: 16px;
+  }
+  &__sns-link-item:last-of-type {
+    border-right: 0;
+  }
+  &__sns-link {
+    color: rgba(255, 255, 255, 0.6);
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+  &__sns-link:hover {
+    color: #fff;
+    text-decoration: underline;
   }
 }
