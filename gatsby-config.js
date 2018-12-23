@@ -150,63 +150,69 @@ module.exports = {
       {
         startYYYYMM: '201811',
         endYYYYMM: null,
-        name: 'Financial System',
+        name: 'Subsystems of a Huge Financial System',
         company: 'Pega Japan K.K.',
         workRole: 'Systems Architect',
         themeColor: '#15183f',
-        description: 'Developing some subsystems of a financial system.',
-        accomplishments: [],
+        description: 'Subsystems of a huge financial system.',
+        accomplishments: [{ content: 'Develop some features' }],
       },
       {
         startYYYYMM: '201709',
         endYYYYMM: '201806',
-        name: 'WSP Development',
+        name: 'Attendance & Time Tracking System',
         company: 'TeamSpirit Inc.',
         workRole: 'Frontend Engineer',
         themeColor: '#107cad',
-        description: 'Developing a new attendance system product.',
+        description:
+          'An enterprise application to provide an attendance management & time tracking. Built on Sales Cloud.',
         accomplishments: [
-          { content: 'Setup a type checker for the project' },
-          { content: 'Maintain frontend coding conventions' },
+          { content: 'Design specifications & develop some features' },
+          { content: 'Setup static type checking for the project' },
         ],
       },
       {
         startYYYYMM: '201702',
         endYYYYMM: '201704',
-        name: 'Developer Tools Development',
+        name: 'Frontend Developer Tools',
         company: 'Works Applications Co., Ltd.',
-        workRole: 'Engineer',
+        workRole: 'Frontend Engineer',
         themeColor: '#20334c',
         description:
-          "Domestic tools to improve product developers' productivity.",
+          "Frontend developer tools to improve product developers' productivities.",
         accomplishments: [],
       },
       {
         startYYYYMM: '201610',
         endYYYYMM: '201701',
-        name: 'Datasync Framework Development',
+        name: 'Domestic Datasync Framework',
         company: 'Works Applications Co., Ltd.',
-        workRole: 'Frontend Engineer & Backend Engineer & DB Engineer',
+        workRole: 'Frontend & Backend & Database Engineer',
         themeColor: '#20334c',
         description:
           'A domestic framework to sync data between RDB and Cassandra.',
         accomplishments: [
-          { content: 'Create a testing tool for product developers' },
+          { content: 'Develop a distributed batch to sync data in bulk' },
           {
             content:
-              'Create a data dumping feature to reproduce data-related issues',
+              'Create a testing tool to enable the framework users to test their modules easily',
+          },
+          {
+            content:
+              'Develop an useful feature to reproduce data-related issues in development environment',
           },
         ],
       },
       {
         startYYYYMM: '201608',
         endYYYYMM: '201609',
-        name: 'HUE Product Prototyping',
+        name: 'Employee Onboarding System Prototyping',
         company: 'Works Applications Co., Ltd.',
         workRole: 'Frontend Engineer',
         themeColor: '#20334c',
-        description: 'Creating a prototype for a Onboarding system product. ',
-        accomplishments: [],
+        description:
+          'A prototype of an Employee Onboarding subsystem of a ERP product',
+        accomplishments: [{ content: 'Design & develop some mockup screens' }],
       },
     ],
   },
@@ -216,7 +222,7 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-typography',
       options: {
-        pathToConfigModule: 'src/utils/typography.js',
+        pathToConfigModule: 'srcutils/typography.js',
         omitGoogleFont: false,
       },
     },
