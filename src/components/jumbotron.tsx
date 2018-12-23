@@ -49,6 +49,24 @@ export class Jumbotron extends React.Component<{}, {}> {
                 GitHub
               </a>
             </li>
+            <li className="jumbotron__sns-link-item">
+              <a
+                href="https://leetcode.com/sei40kr/"
+                title="LeetCode"
+                className="jumbotron__sns-link"
+              >
+                LeetCode
+              </a>
+            </li>
+            <li className="jumbotron__sns-link-item">
+              <a
+                href="https://atcoder.jp/users/sei40kr"
+                title="AtCoder"
+                className="jumbotron__sns-link"
+              >
+                AtCoder
+              </a>
+            </li>
           </ul>
         </section>
       </header>
