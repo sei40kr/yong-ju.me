@@ -6,38 +6,36 @@ module.exports = {
         name: 'Software Engineering',
         progress: 'advanced',
         abilities: [
-          { content: 'Understand SOLID principles' },
           {
             content:
-              'Understand general data structures: Array, Linked List, Hash Map, Binary Heap, Segment Tree',
-          },
-          { content: 'Understand general sort algorithms, search algorithms' },
-          {
-            content: 'Analyze the time and space complexity of an algorithm',
+              'Knowledge for general data structures: linked list, binary heap, segment tree, etc ...',
           },
           {
-            content: 'Design testable implementations by removing side-effects',
+            content: 'Knowledge for some algorithms to reduce time complexity',
+          },
+          {
+            content: 'Design a clean & testable implementation',
           },
         ],
         experiences: [],
       },
       {
-        name: 'Frontend Engineering',
+        name: 'Web Development',
         progress: 'advanced',
         abilities: [
-          { content: 'Design an webapp in MVC pattern' },
-          { content: 'Understand the lifecycle of React component' },
-          { content: 'Design an application state in Flux, Redux' },
-          { content: 'Understand HTTP' },
+          { content: 'Model-driven design' },
+          { content: 'Knowledge for HTML, CSS, DOM, event-driven programming' },
+          { content: 'Knowledge for React component lifecycle' },
+          { content: 'Develop an app using Prototype.js/jQuery' },
+          { content: 'Develop a rich app using React+Flux/Redux' },
         ],
         experiences: [
-          { content: 'Develop apps using Closure Library, React at work' },
-          { content: 'Create this portfolio' },
-          { content: 'Create hybrid apps using Cordova&Ionic/Onsen UI' },
-          { content: 'Create browser games using Phaser' },
+          { content: 'Develop apps using Closure Library/React' },
+          { content: 'Develop web games using Phaser' },
+          { content: 'Design & develop hybrid apps using Cordova & Onsen UI' },
           {
             content:
-              'Read most parts of Prototype.js, Script.aculo.us, Zepto.js, CreateJS, Hyperapp',
+              'Read most parts of Prototype.js, Script.aculo.us, Zepto.js, CreateJS, Processing.js, Hyperapp',
           },
         ],
       },
@@ -45,72 +43,40 @@ module.exports = {
         name: 'Java',
         progress: 'advanced',
         abilities: [
-          { content: 'Understand how general GC algotirhm works' },
-          { content: 'Understand how Spring DI works' },
-          { content: 'Develop an webapp using Spring MVC' },
-          { content: 'Design an application in model driven' },
-          { content: 'Implement a distributed batch using Spark' },
+          { content: 'Model-driven design' },
+          {
+            content: 'Create a webapp using Spring Boot, Spring MVC, Spring DI',
+          },
+          { content: 'Create a distributed batch using Spark' },
         ],
         experiences: [
           { content: 'Develop webapps using Spring MVC at work' },
           { content: 'Develop a distributed batch using Spark at work' },
           {
-            content: 'Join a open-sourced game server development of a MMORPG',
+            content: 'Join an open-source game server development',
           },
         ],
       },
       {
-        name: 'Database Engineering',
+        name: 'Database',
         progress: 'intermediate',
         abilities: [
-          { content: 'Understand CAP theorem' },
           {
             content:
-              'Understand general DB architectures: Master-Slave, Multi Masters, Consistent Hashing',
+              'General knowledge for distributed database: architectures, CAP, replication, quorum, etc ...',
           },
-          {
-            content: 'Understand general DB indexes: Binary Tree, Hash',
-          },
-          { content: 'Design a table schema and relationships' },
           {
             content:
-              'Optimize an execution plan and improve the query performance: Join methods, Partitioning, Padding Factor',
+              'Design a schema balancing the consistency and the performance',
+          },
+          {
+            content:
+              'Optimize a query performance: creating an index, denormalize the schema',
           },
         ],
         experiences: [
-          { content: 'Improve query performance in PostgreSQL, Oracle' },
-          { content: 'Create a trigger function to pool the update logs' },
-          { content: 'Solve HackerRank, LeetCode problems' },
-        ],
-      },
-      {
-        name: 'C',
-        progress: 'intermediate',
-        abilities: [
-          { content: 'Create simple tools' },
-          { content: 'Understand how memory heap and stack work' },
-        ],
-        experiences: [
-          { content: 'Implement popular algorithms' },
-          { content: 'Solve AtCoder, LeetCode problems' },
-        ],
-      },
-      {
-        name: 'Rust',
-        progress: 'beginner',
-        abilities: [{ content: 'Create simple tools' }],
-        experiences: [
-          { content: 'Implement popular algorithms' },
-          { content: 'Solve AtCoder problems' },
-        ],
-      },
-      {
-        name: 'Ruby',
-        progress: 'beginner',
-        abilities: [],
-        experiences: [
-          { content: 'Create RPG Maker VX extensions' },
-          { content: 'Read most parts of RGSS2' },
+          { content: 'Optimize a query performance' },
+          { content: 'Solve LeetCode/HackerRank problems' },
         ],
       },
       {
@@ -120,21 +86,82 @@ module.exports = {
         experiences: [
           {
             content:
-              'Create access counters, guest books, simple blog systems from scratch',
+              'Develop access counters, guest books, simple blog systems from scratch',
           },
-          { content: 'Create FFAPHP extensions' },
-          { content: 'Read the authentication part in WordPress' },
+          { content: 'Develop FFAPHP extensions' },
+          { content: 'Read the most parts of FFAPHP' },
+          {
+            content:
+              'Read the authentication part of WordPress, Simple Blog PHP',
+          },
         ],
+      },
+      {
+        name: 'Ruby',
+        progress: 'beginner',
+        abilities: [],
+        experiences: [
+          { content: 'Read most parts of RGSS2' },
+          { content: 'Develop RPG Maker VX extensions' },
+          { content: 'Solve paiza problems' },
+        ],
+      },
+      {
+        name: 'C',
+        progress: 'intermediate',
+        abilities: [
+          {
+            content:
+              'Knowledge for variable lifecycle, memory allocation & freeing',
+          },
+        ],
+        experiences: [
+          { content: 'Implement major algorithms' },
+          { content: 'Solve AtCoder/LeetCode/HackerRank problems' },
+        ],
+      },
+      {
+        name: 'Rust',
+        progress: 'beginner',
+        abilities: [],
+        experiences: [
+          { content: 'Implement major algorithms' },
+          { content: 'Solve AtCoder problems' },
+        ],
+      },
+      {
+        name: 'Haskell',
+        progress: 'beginner',
+        abilities: [],
+        experiences: [{ content: 'Solve AtCoder/HackerRank problems' }],
       },
       {
         name: 'Shell Script',
         progress: 'intermediate',
         abilities: [
           {
-            content: 'Create useful tools using POSIX-compatible shell script',
+            content:
+              'Knowledge for basic commands and syntax of Bourne-compatible shells and Z shell',
           },
         ],
-        experiences: [{ content: 'Customize my shell environment' }],
+        experiences: [
+          { content: 'Create useful tools for other developers' },
+          { content: 'Customize my shell environment' },
+        ],
+      },
+      {
+        name: 'Pega Platform',
+        progress: 'beginner',
+        abilities: [],
+        experiences: [
+          { content: 'Certified as a Senior Systems Architect' },
+          { content: 'Certified as a Business Architect' },
+          { content: 'Complete Decisioning Consultant course in Pega Academy' },
+          {
+            content:
+              'Complete Robotics Process Automation course in Pega Academy',
+          },
+        ],
       },
       {
         name: 'Emacs Lisp',
