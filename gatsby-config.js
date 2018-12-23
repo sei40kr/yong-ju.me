@@ -154,7 +154,8 @@ module.exports = {
         company: 'Pega Japan K.K.',
         workRole: 'Systems Architect',
         themeColor: '#15183f',
-        description: 'Subsystems of a huge financial system.',
+        description:
+          'Subsystems of a huge financial system. Built on Pega Platform.',
         accomplishments: [{ content: 'Develop some features' }],
       },
       {
@@ -211,7 +212,7 @@ module.exports = {
         workRole: 'Frontend Engineer',
         themeColor: '#20334c',
         description:
-          'A prototype of an Employee Onboarding subsystem of a ERP product',
+          'A prototype of an Employee Onboarding subsystem of an ERP product.',
         accomplishments: [{ content: 'Design & develop some mockup screens' }],
       },
     ],
