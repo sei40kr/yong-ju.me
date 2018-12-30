@@ -15,7 +15,7 @@ interface Props {
 export class Skill extends React.Component<Props, {}> {
   public render() {
     return (
-      <Card tagName="article" className="skill">
+      <Card tagName="article" className={`skill skill--${this.props.progress}`}>
         <header className="skill__header">
           <h3 className="skill__name">{this.props.name}</h3>
           {this.renderProgress(this.props.progress)}
