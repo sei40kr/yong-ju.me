@@ -1,23 +1,27 @@
-import classNames from 'classnames';
-import * as React from 'react';
-
-import './card.scss';
+import { Interpolation, jsx, Theme } from '@emotion/react';
+import { ReactNode } from 'react';
 
 interface CardProps {
   tagName: string;
-  className: string;
+  children: ReactNode;
+  css: Interpolation<Theme>;
 }
 
-export default class Card extends React.Component<CardProps, {}> {
-  public render() {
-    const { tagName, className, children, ...restProps } = this.props;
-    return React.createElement(
-      tagName,
-      {
-        className: classNames('card', className),
-        ...restProps,
-      },
-      children
-    );
-  }
-}
+const Card = ({ tagName, css, children, ...restProps }: CardProps) =>
+  jsx(
+    tagName,
+    {
+      css: [
+        css,
+        {
+          background: '#fff',
+          boxShadow: '0 2px 20px rgba(0, 0, 0, 0.2)',
+          fontFamily: "'Noto Sans', sans-serif",
+        },
+      ],
+      ...restProps,
+    },
+    children
+  );
+
+export default Card;

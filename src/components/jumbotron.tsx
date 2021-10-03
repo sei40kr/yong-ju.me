@@ -1,77 +1,182 @@
-import * as React from 'react';
+import bg from '../assets/img/jumbotron-bg.png';
 import avatarImg from '../assets/img/avatar.png';
-import './jumbotron.scss';
 
-export class Jumbotron extends React.Component<{}, {}> {
-  public render() {
-    return (
-      <header role="banner" className="jumbotron">
-        <div className="jumbotron__avatar">
-          <img
-            src={avatarImg}
-            width="128"
-            height="128"
-            className="jumbotron__avatar-img"
-          />
-        </div>
-        <h1 className="jumbotron__name">
-          <span className="jumbotron__name-text">Seong Yong-ju</span>
-        </h1>
-        <p className="jumbotron__role">
-          <span className="jumbotron__role-text">
-            Software Engineer/Systems Architect
-          </span>
-        </p>
-        <section className="jumbotron__introduction">
-          <p>
-            I've been interested in developing an application since my childhood
-            <br />
-            and have extensive experience in engineering.
-          </p>
-        </section>
-        <section className="jumbotron__sns-links">
-          <ul className="jumbotron__sns-link-list">
-            <li className="jumbotron__sns-link-item">
-              <a
-                href="https://www.linkedin.com/in/sei40kr/"
-                title="LinkedIn"
-                className="jumbotron__sns-link"
-              >
-                LinkedIn
-              </a>
-            </li>
-            <li className="jumbotron__sns-link-item">
-              <a
-                href="https://github.com/sei40kr"
-                title="GitHub"
-                className="jumbotron__sns-link"
-              >
-                GitHub
-              </a>
-            </li>
-            <li className="jumbotron__sns-link-item">
-              <a
-                href="https://leetcode.com/sei40kr/"
-                title="LeetCode"
-                className="jumbotron__sns-link"
-              >
-                LeetCode
-              </a>
-            </li>
-            <li className="jumbotron__sns-link-item">
-              <a
-                href="https://atcoder.jp/users/sei40kr"
-                title="AtCoder"
-                className="jumbotron__sns-link"
-              >
-                AtCoder
-              </a>
-            </li>
-          </ul>
-        </section>
-      </header>
-    );
-  }
-}
+const Jumbotron = ({}: {}) => (
+  <header
+    role="banner"
+    css={{
+      alignItems: 'center',
+      background: `fixed #114488 url(${bg})`,
+      display: 'flex',
+      flexDirection: 'column',
+      height: '480px',
+      justifyContent: 'center',
+    }}
+  >
+    <div
+      css={{
+        margin: '0 0 16px 0',
+      }}
+    >
+      <img
+        src={avatarImg}
+        width="128"
+        height="128"
+        css={{
+          borderRadius: '100%',
+        }}
+      />
+    </div>
+    <h1
+      css={{
+        margin: '0 0 2px 0',
+      }}
+    >
+      <span
+        css={{
+          background: '#fff',
+          display: 'inline-block',
+          fontFamily: "'Roboto Slab', serif",
+          fontSize: '40px',
+          padding: '0 8px',
+        }}
+      >
+        Seong Yong-ju
+      </span>
+    </h1>
+    <p
+      css={{
+        margin: '0 0 16px 0',
+      }}
+    >
+      <span
+        css={{
+          background: '#fff',
+          display: 'inline-block',
+          fontFamily: "'Roboto Slab', serif",
+          fontSize: '24px',
+          padding: '0 8px',
+        }}
+      >
+        Software Engineer/Systems Architect
+      </span>
+    </p>
+    <section
+      css={{
+        color: '#fff',
+        fontFamily: "'Roboto Slab', serif",
+        fontSize: '20px',
+        fontWeight: '300',
+        margin: '0 0 32px 0',
+        textAlign: 'center',
+      }}
+    >
+      <p>
+        I've been interested in developing an application since my childhood
+        <br />
+        and have extensive experience in engineering.
+      </p>
+    </section>
+    <section>
+      <ul css={{ display: 'flex' }}>
+        <li
+          css={{
+            borderRight: '1px solid rgba(255, 255, 255, 0.3)',
+            fontFamily: 'Montserrat, sans-serif',
+            fontSize: '14px',
+            padding: '0 16px',
+          }}
+        >
+          <a
+            href="https://www.linkedin.com/in/sei40kr/"
+            title="LinkedIn"
+            css={{
+              color: 'rgba(255, 255, 255, 0.6)',
+              textDecoration: 'none',
+              textTransform: 'uppercase',
+              '&:hover': {
+                color: '#fff',
+                textDecoration: 'underline',
+              },
+            }}
+          >
+            LinkedIn
+          </a>
+        </li>
+        <li
+          css={{
+            borderRight: '1px solid rgba(255, 255, 255, 0.3)',
+            fontFamily: 'Montserrat, sans-serif',
+            fontSize: '14px',
+            padding: '0 16px',
+          }}
+        >
+          <a
+            href="https://github.com/sei40kr"
+            title="GitHub"
+            css={{
+              color: 'rgba(255, 255, 255, 0.6)',
+              textDecoration: 'none',
+              textTransform: 'uppercase',
+              '&:hover': {
+                color: '#fff',
+                textDecoration: 'underline',
+              },
+            }}
+          >
+            GitHub
+          </a>
+        </li>
+        <li
+          css={{
+            borderRight: '1px solid rgba(255, 255, 255, 0.3)',
+            fontFamily: 'Montserrat, sans-serif',
+            fontSize: '14px',
+            padding: '0 16px',
+          }}
+        >
+          <a
+            href="https://leetcode.com/sei40kr/"
+            title="LeetCode"
+            css={{
+              '&:hover': {
+                color: '#fff',
+                textDecoration: 'underline',
+              },
+              color: 'rgba(255, 255, 255, 0.6)',
+              textDecoration: 'none',
+              textTransform: 'uppercase',
+            }}
+          >
+            LeetCode
+          </a>
+        </li>
+        <li
+          css={{
+            fontFamily: 'Montserrat, sans-serif',
+            fontSize: '14px',
+            padding: '0 16px',
+          }}
+        >
+          <a
+            href="https://atcoder.jp/users/sei40kr"
+            title="AtCoder"
+            css={{
+              color: 'rgba(255, 255, 255, 0.6)',
+              textDecoration: 'none',
+              textTransform: 'uppercase',
+              '&:hover': {
+                color: '#fff',
+                textDecoration: 'underline',
+              },
+            }}
+          >
+            AtCoder
+          </a>
+        </li>
+      </ul>
+    </section>
+  </header>
+);
 
 export default Jumbotron;

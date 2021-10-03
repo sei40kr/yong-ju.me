@@ -1,24 +1,43 @@
-import classNames from 'classnames';
-import * as React from 'react';
-
-import './section.scss';
+import { ReactNode } from 'react';
 
 interface SectionProps {
   title: string;
-  className?: string;
+  children: ReactNode;
 }
 
-export default class Section extends React.Component<SectionProps, {}> {
-  public render() {
-    return (
-      <section className={classNames('section', this.props.className)}>
-        <header className="section__header">
-          <h2 className="section__title">{this.props.title}</h2>
-        </header>
-        <div className="section__content-outer">
-          <main className="section__content">{this.props.children}</main>
-        </div>
-      </section>
-    );
-  }
-}
+const Section = (props: SectionProps) => (
+  <section>
+    <header
+      css={{
+        background: '#000',
+        color: '#fff',
+        height: '64px',
+      }}
+    >
+      <h2
+        css={{
+          fontFamily: "'Noto Sans', sans-serif",
+          fontSize: '24px',
+          fontWeight: 700,
+          lineHeight: '64px',
+          textAlign: 'center',
+        }}
+      >
+        {props.title}
+      </h2>
+    </header>
+    <div>
+      <main
+        css={{
+          margin: '0 auto',
+          maxWidth: '1024px',
+          width: 'calc(100vw - 64px)',
+        }}
+      >
+        {props.children}
+      </main>
+    </div>
+  </section>
+);
+
+export default Section;
