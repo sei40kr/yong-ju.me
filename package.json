@@ -8,9 +8,11 @@
     "start": "gatsby develop",
     "develop": "gatsby develop",
     "build": "gatsby build",
-    "type-check": "tsc --noEmit",
-    "lint": "stylelint 'src/**/*.scss' && tslint --project .",
-    "format": "prettier --write 'gatsby-config.js' 'src/**/*.{scss,js,ts,tsx}' && stylelint --fix 'src/**/*.scss' && tslint --fix --project ."
+    "serve": "gatsby serve",
+    "clean": "gatsby clean",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint .",
+    "format": "eslint --fix . && prettier --write ."
   },
   "dependencies": {
     "@emotion/react": "^11.7.1",
