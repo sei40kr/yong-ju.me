@@ -11,8 +11,15 @@ module.exports = {
     'plugin:react-hooks/recommended',
     'prettier',
   ],
-  rules:{
-    "@emotion/no-vanilla": "error",
-    "@emotion/import-from-emotion": "error",
-  }
+  settings: {
+    react: {
+      pragma: 'jsx',
+      version: '17.0.2',
+    },
+  },
+  rules: {
+    'react/react-in-jsx-scope': 'off',
+    '@emotion/no-vanilla': 'error',
+    '@emotion/import-from-emotion': 'error',
+  },
 };

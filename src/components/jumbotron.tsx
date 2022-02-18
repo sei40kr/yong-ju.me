@@ -1,7 +1,7 @@
 import bg from '../assets/img/jumbotron-bg.png';
 import avatarImg from '../assets/img/avatar.png';
 
-const Jumbotron = ({}: {}) => (
+const Jumbotron = () => (
   <header
     role="banner"
     css={{
@@ -72,7 +72,7 @@ const Jumbotron = ({}: {}) => (
       }}
     >
       <p>
-        I've been interested in developing an application since my childhood
+        I&apos;ve been interested in developing an application since my childhood
         <br />
         and have extensive experience in engineering.
       </p>

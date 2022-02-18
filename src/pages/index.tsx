@@ -6,8 +6,6 @@ import Project from '../components/project';
 import Section from '../components/section';
 import Skill from '../components/skill';
 
-/* eslint-disable react/react-in-jsx-scope */
-
 interface ProjectModel {
   startYYYYMM: string;
   endYYYYMM: string;
