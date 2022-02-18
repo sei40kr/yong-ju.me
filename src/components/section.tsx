@@ -1,4 +1,4 @@
-import { ReactNode } from 'react';
+import { ReactNode } from "react";
 
 interface SectionProps {
   title: string;
@@ -9,18 +9,18 @@ const Section = (props: SectionProps) => (
   <section>
     <header
       css={{
-        background: '#000',
-        color: '#fff',
-        height: '64px',
+        background: "#000",
+        color: "#fff",
+        height: "64px",
       }}
     >
       <h2
         css={{
           fontFamily: "'Noto Sans', sans-serif",
-          fontSize: '24px',
+          fontSize: "24px",
           fontWeight: 700,
-          lineHeight: '64px',
-          textAlign: 'center',
+          lineHeight: "64px",
+          textAlign: "center",
         }}
       >
         {props.title}
@@ -29,9 +29,9 @@ const Section = (props: SectionProps) => (
     <div>
       <main
         css={{
-          margin: '0 auto',
-          maxWidth: '1024px',
-          width: 'calc(100vw - 64px)',
+          margin: "0 auto",
+          maxWidth: "1024px",
+          width: "calc(100vw - 64px)",
         }}
       >
         {props.children}

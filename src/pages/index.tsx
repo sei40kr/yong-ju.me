@@ -1,10 +1,10 @@
-import { graphql } from 'gatsby';
-import { Fragment } from 'react';
-import { Helmet } from 'react-helmet';
-import Jumbotron from '../components/jumbotron';
-import Project from '../components/project';
-import Section from '../components/section';
-import Skill from '../components/skill';
+import { graphql } from "gatsby";
+import { Fragment } from "react";
+import { Helmet } from "react-helmet";
+import Jumbotron from "../components/jumbotron";
+import Project from "../components/project";
+import Section from "../components/section";
+import Skill from "../components/skill";
 
 interface ProjectModel {
   startYYYYMM: string;
@@ -19,7 +19,7 @@ interface ProjectModel {
 
 interface SkillModel {
   name: string;
-  progress: 'beginner' | 'intermediate' | 'advanced';
+  progress: "beginner" | "intermediate" | "advanced";
   abilities: Array<{ content: string }>;
   experiences: Array<{ content: string }>;
 }
@@ -73,10 +73,10 @@ export const pageQuery = graphql`
 const renderSkills = (skills: SkillModel[]) => (
   <div
     css={{
-      display: 'flex',
-      flexWrap: 'wrap',
-      justifyContent: 'space-between',
-      padding: '32px 0',
+      display: "flex",
+      flexWrap: "wrap",
+      justifyContent: "space-between",
+      padding: "32px 0",
     }}
   >
     {skills.map((skill, i) => (
@@ -94,7 +94,7 @@ const renderSkills = (skills: SkillModel[]) => (
 const renderProjects = (projects: ProjectModel[]) => (
   <div
     css={{
-      padding: '32px 0',
+      padding: "32px 0",
     }}
   >
     {projects.map((project, i) => (
@@ -122,8 +122,8 @@ const IndexPage = (props: IndexPageProps) => (
     </Helmet>
     <div
       css={{
-        background: '#f5f5f5',
-        color: '#212121',
+        background: "#f5f5f5",
+        color: "#212121",
       }}
     >
       <Jumbotron />
