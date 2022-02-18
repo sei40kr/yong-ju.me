@@ -10,9 +10,7 @@
     "build": "gatsby build",
     "type-check": "tsc --noEmit",
     "lint": "stylelint 'src/**/*.scss' && tslint --project .",
-    "format": "prettier --write 'gatsby-config.js' 'src/**/*.{scss,js,ts,tsx}' && stylelint --fix 'src/**/*.scss' && tslint --fix --project .",
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "format": "prettier --write 'gatsby-config.js' 'src/**/*.{scss,js,ts,tsx}' && stylelint --fix 'src/**/*.scss' && tslint --fix --project ."
   },
   "dependencies": {
     "@emotion/react": "^11.7.1",
