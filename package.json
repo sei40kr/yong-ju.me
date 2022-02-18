@@ -11,8 +11,8 @@
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "typecheck": "tsc --noEmit",
-    "lint": "eslint .",
-    "format": "eslint --fix . && prettier --write ."
+    "lint": "eslint src",
+    "format": "eslint --fix src && prettier --write src"
   },
   "dependencies": {
     "@emotion/react": "^11.7.1",
