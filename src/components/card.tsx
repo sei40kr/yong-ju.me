@@ -10,9 +10,7 @@ const Card = ({ tagName, className, children, ...restProps }: CardProps) =>
   createElement(
     tagName,
     {
-      className: `bg-white shadow-[0_2px_20px_rgba(0,0,0,0.2)] ${
-        className || ""
-      }`,
+      className: `bg-white shadow-lg ${className || ""}`,
       ...restProps,
     },
     children

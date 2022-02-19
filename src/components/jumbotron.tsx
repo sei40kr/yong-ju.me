@@ -15,11 +15,11 @@ const SnsLinkItem = ({
   title: string;
   children: ReactNode;
 }) => (
-  <li className="border-r border-[rgba(255,255,255,0.3)] px-4 font-montserrat text-sm last:border-r-0">
+  <li className="border-r border-white/30 px-4 font-montserrat text-sm last:border-r-0">
     <a
       href={href}
       title={title}
-      className="uppercase text-[rgba(255,255,255,0.6)] hover:text-white hover:underline"
+      className="uppercase text-white/60 hover:text-white hover:underline"
     >
       {children}
     </a>
@@ -36,7 +36,7 @@ const Jumbotron = () => (
       <img src={avatarImg} className="h-32 w-32 rounded-full" />
     </div>
     <h1 className="mb-0.5">
-      <span className="inline-block bg-white px-2 font-roboto-slab text-[2.5rem]">
+      <span className="inline-block bg-white px-2 font-roboto-slab text-4xl">
         Seong Yong-ju
       </span>
     </h1>

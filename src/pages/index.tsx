@@ -93,7 +93,7 @@ const IndexPage = (props: IndexPageProps) => (
       />
       <title>{props.data.site.siteMetadata.siteName}</title>
     </Helmet>
-    <div className="bg-[#f5f5f5] text-[#212121]">
+    <div className="bg-gray-100">
       <Jumbotron />
       <Section title="Skills">{renderSkills(skills)}</Section>
       <Section title="Projects">{renderProjects(projects)}</Section>

@@ -36,7 +36,7 @@ const formatPeriodLength = (startYYYYMM: string, endYYYYMM: string) => {
 };
 
 const renderPeriod = (startYYYYMM: string, endYYYYMM: string | null) => (
-  <section className="mb-2 text-right text-base text-[rgba(255,255,255,0.6)]">
+  <section className="mb-2 text-right text-base text-white/60">
     {formatYYYYMM(startYYYYMM)} –{" "}
     {endYYYYMM !== null ? formatYYYYMM(endYYYYMM) : "working"}
     {endYYYYMM !== null
@@ -48,14 +48,14 @@ const renderPeriod = (startYYYYMM: string, endYYYYMM: string | null) => (
 const renderAccomplishments = (accomplishments: string[]) =>
   0 < accomplishments.length ? (
     <section className="mb-4">
-      <h4 className="mb-1 font-montserrat text-sm font-medium uppercase text-[#616161]">
+      <h4 className="mb-1 font-montserrat text-sm font-medium uppercase text-slate-500">
         Accomplishments
       </h4>
       <ul>
         {accomplishments.map((accomplishment, i) => (
           <li
             key={i}
-            className="text-base before:-ml-8 before:inline-block before:w-8 before:text-right before:text-[#616161] before:content-['・']"
+            className="text-base before:-ml-8 before:inline-block before:w-8 before:text-right before:text-slate-500 before:content-['・']"
           >
             {accomplishment}
           </li>

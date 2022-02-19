@@ -1,3 +1,5 @@
+const colors = require('tailwindcss/colors');
+
 module.exports = {
   content: [
     "./src/**/*.{js,jsx,ts,tsx}",
@@ -11,9 +13,9 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        advanced: "#d32f2f",
-        beginner: "#388e3c",
-        intermediate: "#f57c00",
+        advanced: colors.red[600],
+        beginner: colors.lime[700],
+        intermediate: colors.yellow[600],
       },
       borderWidth: {
         3: "3px",

@@ -19,14 +19,14 @@ const renderProgress = (progress: Progress) => (
 const renderAbilities = (abilities: string[]) =>
   0 < abilities.length ? (
     <section className="mb-4">
-      <h4 className="mb-1 font-montserrat text-sm uppercase text-[#616161]">
+      <h4 className="mb-1 font-montserrat text-sm uppercase text-slate-500">
         Abilities
       </h4>
       <ul>
         {abilities.map((ability, i) => (
           <li
             key={i}
-            className="before:-ml-8 before:inline-block before:w-8 before:text-right before:text-[#616161] before:content-['・']"
+            className="before:-ml-8 before:inline-block before:w-8 before:text-right before:text-slate-500 before:content-['・']"
           >
             {ability}
           </li>
@@ -38,14 +38,14 @@ const renderAbilities = (abilities: string[]) =>
 const renderExperiences = (experiences: string[]) =>
   0 < experiences.length ? (
     <section className="mb-4">
-      <h4 className="mb-1 font-montserrat text-sm uppercase text-[#616161]">
+      <h4 className="mb-1 font-montserrat text-sm uppercase text-slate-500">
         Experiences
       </h4>
       <ul>
         {experiences.map((experience, i) => (
           <li
             key={i}
-            className="before:-ml-8 before:inline-block before:w-8 before:text-right before:text-[#616161] before:content-['・']"
+            className="before:-ml-8 before:inline-block before:w-8 before:text-right before:text-slate-500 before:content-['・']"
           >
             {experience}
           </li>
