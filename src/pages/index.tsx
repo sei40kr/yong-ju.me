@@ -5,6 +5,8 @@ import Jumbotron from "../components/jumbotron";
 import Project from "../components/project";
 import Section from "../components/section";
 import Skill from "../components/skill";
+import projects from "../../content/projects.yaml";
+import skills from "../../content/skills.yaml";
 
 interface ProjectModel {
   startYYYYMM: string;
@@ -29,8 +31,6 @@ interface IndexPageProps {
     site: {
       siteMetadata: {
         siteName: string;
-        skills: SkillModel[];
-        projects: ProjectModel[];
       };
     };
   };
@@ -43,28 +43,6 @@ export const pageQuery = graphql`
     site {
       siteMetadata {
         siteName
-        skills {
-          name
-          progress
-          abilities {
-            content
-          }
-          experiences {
-            content
-          }
-        }
-        projects {
-          startYYYYMM
-          endYYYYMM
-          name
-          company
-          workRole
-          themeColor
-          description
-          accomplishments {
-            content
-          }
-        }
       }
     }
   }
@@ -117,12 +95,8 @@ const IndexPage = (props: IndexPageProps) => (
     </Helmet>
     <div className="bg-[#f5f5f5] text-[#212121]">
       <Jumbotron />
-      <Section title="Skills">
-        {renderSkills(props.data.site.siteMetadata.skills)}
-      </Section>
-      <Section title="Projects">
-        {renderProjects(props.data.site.siteMetadata.projects)}
-      </Section>
+      <Section title="Skills">{renderSkills(skills)}</Section>
+      <Section title="Projects">{renderProjects(projects)}</Section>
     </div>
   </Fragment>
 );

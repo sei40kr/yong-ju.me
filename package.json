@@ -12,7 +12,7 @@
     "clean": "gatsby clean",
     "typecheck": "tsc --noEmit",
     "lint": "eslint src",
-    "format": "eslint --fix src && prettier --write src"
+    "format": "eslint --fix src && prettier --write content src"
   },
   "dependencies": {
     "@types/classnames": "^2.3.1",
