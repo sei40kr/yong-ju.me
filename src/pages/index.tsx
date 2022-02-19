@@ -1,12 +1,12 @@
 import { graphql } from "gatsby";
-import React, { Fragment } from "react";
-import { Helmet } from "react-helmet";
+import React from "react";
+import projects from "../../content/projects.yaml";
+import skills from "../../content/skills.yaml";
 import Jumbotron from "../components/jumbotron";
+import Layout from "../components/layout";
 import Project from "../components/project";
 import Section from "../components/section";
 import Skill from "../components/skill";
-import projects from "../../content/projects.yaml";
-import skills from "../../content/skills.yaml";
 
 interface ProjectModel {
   startYYYYMM: string;
@@ -83,22 +83,13 @@ const renderProjects = (projects: ProjectModel[]) => (
 );
 
 const IndexPage = (props: IndexPageProps) => (
-  <Fragment>
-    <Helmet>
-      <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
-      <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Noto+Sans:wght@400;700&family=Roboto+Slab:wght@300;400&display=swap"
-        rel="stylesheet"
-      />
-      <title>{props.data.site.siteMetadata.siteName}</title>
-    </Helmet>
+  <Layout siteName={props.data.site.siteMetadata.siteName}>
     <div className="bg-gray-100">
       <Jumbotron />
       <Section title="Skills">{renderSkills(skills)}</Section>
       <Section title="Projects">{renderProjects(projects)}</Section>
     </div>
-  </Fragment>
+  </Layout>
 );
 
 export default IndexPage;
