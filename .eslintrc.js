@@ -1,7 +1,7 @@
 module.exports = {
   root: true,
   parser: "@typescript-eslint/parser",
-  plugins: ["@typescript-eslint", "import", "react", "react-hooks", "@emotion"],
+  plugins: ["@typescript-eslint", "import", "react", "react-hooks"],
   extends: [
     "eslint:recommended",
     "plugin:@typescript-eslint/recommended",
@@ -13,13 +13,7 @@ module.exports = {
   ],
   settings: {
     react: {
-      pragma: "jsx",
       version: "17.0.2",
     },
-  },
-  rules: {
-    "react/react-in-jsx-scope": "off",
-    "@emotion/no-vanilla": "error",
-    "@emotion/import-from-emotion": "error",
   },
 };

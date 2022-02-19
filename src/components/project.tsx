@@ -1,3 +1,4 @@
+import React from "react";
 import Card from "../components/card";
 
 export interface ProjectProps {
@@ -35,14 +36,7 @@ const formatPeriodLength = (startYYYYMM: string, endYYYYMM: string) => {
 };
 
 const renderPeriod = (startYYYYMM: string, endYYYYMM: string | null) => (
-  <section
-    css={{
-      color: "rgba(255, 255, 255, 0.6)",
-      fontSize: "16px",
-      margin: "0 0 8px 0",
-      textAlign: "right",
-    }}
-  >
+  <section className="mb-2 text-right text-base text-[rgba(255,255,255,0.6)]">
     {formatYYYYMM(startYYYYMM)} –{" "}
     {endYYYYMM !== null ? formatYYYYMM(endYYYYMM) : "working"}
     {endYYYYMM !== null
@@ -53,38 +47,15 @@ const renderPeriod = (startYYYYMM: string, endYYYYMM: string | null) => (
 
 const renderAccomplishments = (accomplishments: string[]) =>
   0 < accomplishments.length ? (
-    <section
-      css={{
-        margin: "0 0 16px 0",
-      }}
-    >
-      <h4
-        css={{
-          color: "#616161",
-          fontFamily: "Montserrat, sans-serif",
-          fontSize: "14px",
-          fontWeight: 500,
-          margin: "0 0 4px 0",
-          textTransform: "uppercase",
-        }}
-      >
+    <section className="mb-4">
+      <h4 className="mb-1 font-montserrat text-sm font-medium uppercase text-[#616161]">
         Accomplishments
       </h4>
       <ul>
         {accomplishments.map((accomplishment, i) => (
           <li
             key={i}
-            css={{
-              fontSize: "16px",
-              "&::before": {
-                color: "#616161",
-                content: "'・'",
-                display: "inline-block",
-                margin: "0 0 0 -32px",
-                textAlign: "right",
-                width: "32px",
-              },
-            }}
+            className="text-base before:-ml-8 before:inline-block before:w-8 before:text-right before:text-[#616161] before:content-['・']"
           >
             {accomplishment}
           </li>
@@ -94,56 +65,24 @@ const renderAccomplishments = (accomplishments: string[]) =>
   ) : null;
 
 const Project = (props: ProjectProps) => (
-  <Card
-    tagName="article"
-    css={{
-      margin: "0 0 32px 0",
-      padding: "0 0 4px 0",
-    }}
-  >
+  <Card tagName="article" className="mb-8 pb-1">
     <header
       role="banner"
-      css={{
-        background: props.themeColor,
-        color: "#fff",
-        margin: "0 0 16px 0",
-        padding: "12px 32px 16px 32px",
-      }}
+      className="mb-4 px-8 pb-4 pt-3 text-white"
+      style={{ backgroundColor: props.themeColor }}
     >
       {renderPeriod(props.startYYYYMM, props.endYYYYMM)}
-      <h3
-        css={{
-          fontSize: "24px",
-          fontWeight: 700,
-          margin: "0 0 4px 0",
-        }}
-      >
-        {props.name}
-      </h3>
-      <p
-        css={{
-          fontSize: "16px",
-        }}
-      >
+      <h3 className="mb-1 text-2xl font-bold">{props.name}</h3>
+      <p className="text-base">
         {props.company} / {props.workRole}
       </p>
     </header>
-    <main
-      css={{
-        padding: "0 32px",
-      }}
-    >
-      <section
-        css={{
-          fontSize: "16px",
-          margin: "0 0 16px 0",
-        }}
-      >
+    <main className="px-8">
+      <section className="mb-4 text-base">
         <p>{props.description}</p>
       </section>
       {renderAccomplishments(props.accomplishments)}
     </main>
   </Card>
 );
-
 export default Project;

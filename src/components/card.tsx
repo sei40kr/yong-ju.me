@@ -1,24 +1,18 @@
-import { Interpolation, jsx, Theme } from "@emotion/react";
-import { ReactNode } from "react";
+import { createElement, ReactNode } from "react";
 
 interface CardProps {
   tagName: string;
   children: ReactNode;
-  css: Interpolation<Theme>;
+  className?: string;
 }
 
-const Card = ({ tagName, css, children, ...restProps }: CardProps) =>
-  jsx(
+const Card = ({ tagName, className, children, ...restProps }: CardProps) =>
+  createElement(
     tagName,
     {
-      css: [
-        css,
-        {
-          background: "#fff",
-          boxShadow: "0 2px 20px rgba(0, 0, 0, 0.2)",
-          fontFamily: "'Noto Sans', sans-serif",
-        },
-      ],
+      className: `bg-white shadow-[0_2px_20px_rgba(0,0,0,0.2)] ${
+        className || ""
+      }`,
       ...restProps,
     },
     children

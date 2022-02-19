@@ -1,5 +1,5 @@
 import { graphql } from "gatsby";
-import { Fragment } from "react";
+import React, { Fragment } from "react";
 import { Helmet } from "react-helmet";
 import Jumbotron from "../components/jumbotron";
 import Project from "../components/project";
@@ -71,14 +71,7 @@ export const pageQuery = graphql`
 `;
 
 const renderSkills = (skills: SkillModel[]) => (
-  <div
-    css={{
-      display: "flex",
-      flexWrap: "wrap",
-      justifyContent: "space-between",
-      padding: "32px 0",
-    }}
-  >
+  <div className="flex flex-wrap justify-between py-8">
     {skills.map((skill, i) => (
       <Skill
         key={i}
@@ -92,11 +85,7 @@ const renderSkills = (skills: SkillModel[]) => (
 );
 
 const renderProjects = (projects: ProjectModel[]) => (
-  <div
-    css={{
-      padding: "32px 0",
-    }}
-  >
+  <div className="my-8">
     {projects.map((project, i) => (
       <Project
         key={i}
@@ -118,14 +107,15 @@ const renderProjects = (projects: ProjectModel[]) => (
 const IndexPage = (props: IndexPageProps) => (
   <Fragment>
     <Helmet>
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
+      <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Noto+Sans:wght@400;700&family=Roboto+Slab:wght@300;400&display=swap"
+        rel="stylesheet"
+      />
       <title>{props.data.site.siteMetadata.siteName}</title>
     </Helmet>
-    <div
-      css={{
-        background: "#f5f5f5",
-        color: "#212121",
-      }}
-    >
+    <div className="bg-[#f5f5f5] text-[#212121]">
       <Jumbotron />
       <Section title="Skills">
         {renderSkills(props.data.site.siteMetadata.skills)}
