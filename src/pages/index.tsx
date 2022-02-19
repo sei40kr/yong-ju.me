@@ -49,7 +49,7 @@ export const pageQuery = graphql`
 `;
 
 const renderSkills = (skills: SkillModel[]) => (
-  <div className="flex flex-wrap justify-between py-8">
+  <div className="grid grid-cols-2 gap-8 py-8">
     {skills.map((skill, i) => (
       <Skill
         key={i}

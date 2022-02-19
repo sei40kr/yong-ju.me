@@ -57,7 +57,7 @@ const renderExperiences = (experiences: string[]) =>
 const Skill = (props: SkillProps) => (
   <Card
     tagName="article"
-    className={`mb-8 shrink-0 basis-[calc(50%-16px)] border-t-3 border-${props.progress} px-8 pb-1 pt-4 md:w-full`}
+    className={`border-t-3 border-${props.progress} px-8 pb-1 pt-4 md:w-full`}
   >
     <header>
       <h3 className="mb-1 text-2xl font-bold">{props.name}</h3>
