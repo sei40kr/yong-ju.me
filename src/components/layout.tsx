@@ -1,5 +1,6 @@
 import React, { ReactNode } from "react";
 import { Helmet } from "react-helmet";
+import Jumbotron from "./jumbotron";
 
 const DefaultLayout = ({
   siteName,
@@ -18,6 +19,7 @@ const DefaultLayout = ({
       />
       <title>{siteName}</title>
     </Helmet>
+    <Jumbotron />
     {children}
   </>
 );
