@@ -30,5 +30,5 @@ jobs:
 
       - name: Deploy
         run: |
-          aws s3 sync public s3://blog-yong-ju-me
-          aws cloudfront create-invalidation --distribution-id E1DSDA0D4H10NT --paths '/*'
+          aws s3 sync public s3://yong-ju.me
+          aws cloudfront create-invalidation --distribution-id E1X1ATQ6ZIIJJN --paths '/*'
