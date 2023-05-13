@@ -1,8 +1,8 @@
-import { createElement, ReactNode } from "react";
+import { createElement } from "react";
 
 interface CardProps {
   tagName: string;
-  children: ReactNode;
+  children: React.ReactNode;
   className?: string;
 }
 
