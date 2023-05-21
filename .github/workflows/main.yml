@@ -31,4 +31,4 @@ jobs:
       - name: Deploy
         run: |
           aws s3 sync out s3://yong-ju.me
-          aws cloudfront create-invalidation --distribution-id E1X1ATQ6ZIIJJN --paths '/*'
+          aws cloudfront create-invalidation --distribution-id E3F8JFJOCQE7RG --paths '/*'
