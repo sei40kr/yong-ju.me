@@ -122,6 +122,8 @@ resource "aws_cloudfront_distribution" "website" {
   enabled         = true
   is_ipv6_enabled = true
 
+  aliases = ["yong-ju.me"]
+
   default_cache_behavior {
     allowed_methods  = ["GET", "HEAD", "OPTIONS"]
     cached_methods   = ["GET", "HEAD", "OPTIONS"]
