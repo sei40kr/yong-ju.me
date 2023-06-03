@@ -1,10 +1,5 @@
-import { Montserrat } from "next/font/google";
-import Card from "@/components/Card";
-
-const montserrat = Montserrat({
-  subsets: ["latin"],
-  weight: ["500"],
-});
+import React from "react";
+import Card from "../components/card";
 
 type Progress = "beginner" | "intermediate" | "advanced";
 
@@ -16,9 +11,7 @@ export interface SkillProps {
 }
 
 const renderProgress = (progress: Progress) => (
-  <div
-    className={`mb-4 text-sm text-${progress} uppercase ${montserrat.className}`}
-  >
+  <div className={`mb-4 font-montserrat text-sm text-${progress} uppercase`}>
     {progress}
   </div>
 );
@@ -26,9 +19,7 @@ const renderProgress = (progress: Progress) => (
 const renderAbilities = (abilities: string[]) =>
   0 < abilities.length ? (
     <section className="mb-4">
-      <h4
-        className={`mb-1 text-sm uppercase text-slate-500 ${montserrat.className}`}
-      >
+      <h4 className="mb-1 font-montserrat text-sm uppercase text-slate-500">
         Abilities
       </h4>
       <ul>
@@ -47,9 +38,7 @@ const renderAbilities = (abilities: string[]) =>
 const renderExperiences = (experiences: string[]) =>
   0 < experiences.length ? (
     <section className="mb-4">
-      <h4
-        className={`mb-1 text-sm uppercase text-slate-500 ${montserrat.className}`}
-      >
+      <h4 className="mb-1 font-montserrat text-sm uppercase text-slate-500">
         Experiences
       </h4>
       <ul>

@@ -1,0 +1,18 @@
+language: node_js
+node_js:
+  - 10.14.1
+cache: yarn
+branches:
+  only: master
+git:
+  depth: 1
+install:
+  - yarn
+script:
+  - yarn run build
+deploy:
+  skip_cleanup: true
+  provider: firebase
+  token:
+    secure: SuxASjqn33CJXs2r/XNOnIAdSovZK95sWILDWfVWCBG40yqLjc4tEtMHqxQPmkg9zfMPlMrXmbttnXML5p4dwW0xiG3F2yj4lf2WBntAxDN9ZTqjI++uha/Ro26aoKqJJXkolBMq5NkHg5B9f6G7OHUFdVSfgPYhdkXcuFAnJb8tTaiDbQlDvdOERgiTDuvbwHdWtmaeDNo/l0+BniN/rHZVVemhTQiDZxQ88d7FpzHOuoYUEv6/Hz8vq5f7w5woJ3ivi66u/Nuxub02l4N45Q7FyRyX0k1ZV4Z2qWcfqpnU3UFx0E8aZGWMjBx4og9cPDFNHJld7bqaRFIhWeOxSqo7zzfXp9di/bWOOJXKmTq7rh2la+dmimwG3c7aCRdm5gaGaulvX1278Ip5Pzr+iRq8CBG8FDFj21zEjC3w+xi510RkoMFZVPFlIl/gUR5c45YNj5eYAdDKI0jd6lNdUy14FEspopoaBqDNm4j+74JsKIu8wLxlCmSDTIvM6FNObKOaO5FIxmm6JuzQbcqaM0ziU6roIZF6hWN4ZQPeILItuDRiiqz+exMxuAxfpSrli5wFedU7oxIBOTk4pUHghGFnEaODer+Eqx7XBVSDiesTp6Xt5i5g/89kpb6mZMELEnMe/eFlouxjB6Dv407S6OrHq9lO/H9LRJilRmW/RKU=
+  project: yong-ju-me-e9777

@@ -1,10 +1,5 @@
-import { Montserrat } from "next/font/google";
-import Card from "@/components/Card";
-
-const montserrat = Montserrat({
-  subsets: ["latin"],
-  weight: ["500"],
-});
+import React from "react";
+import Card from "../components/card";
 
 export interface ProjectProps {
   startYYYYMM: string;
@@ -53,9 +48,7 @@ const renderPeriod = (startYYYYMM: string, endYYYYMM: string | null) => (
 const renderAccomplishments = (accomplishments: string[]) =>
   0 < accomplishments.length ? (
     <section className="mb-4">
-      <h4
-        className={`mb-1 text-sm uppercase text-slate-500 ${montserrat.className}`}
-      >
+      <h4 className="mb-1 font-montserrat text-sm font-medium uppercase text-slate-500">
         Accomplishments
       </h4>
       <ul>
