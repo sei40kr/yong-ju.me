@@ -4,6 +4,10 @@ terraform {
       source  = "hashicorp/aws"
       version = "~> 4.67.0"
     }
+    random = {
+      source  = "hashicorp/random"
+      version = "~> 3.5.1"
+    }
   }
 
   backend "s3" {
@@ -53,6 +57,35 @@ resource "aws_s3_bucket" "website" {
   bucket = "yong-ju.me"
 }
 
+resource "random_string" "referer" {
+  length  = 32
+  special = false
+}
+
+data "aws_iam_policy_document" "website" {
+  statement {
+    sid       = "PublicReadGetObject"
+    actions   = ["s3:GetObject"]
+    resources = ["${aws_s3_bucket.website.arn}/*"]
+
+    principals {
+      type        = "AWS"
+      identifiers = ["*"]
+    }
+
+    condition {
+      test     = "StringEquals"
+      variable = "aws:Referer"
+      values   = [random_string.referer.result]
+    }
+  }
+}
+
+resource "aws_s3_bucket_policy" "website" {
+  bucket = aws_s3_bucket.website.id
+  policy = data.aws_iam_policy_document.website.json
+}
+
 resource "aws_s3_bucket_website_configuration" "website" {
   bucket = aws_s3_bucket.website.id
 
@@ -65,58 +98,16 @@ resource "aws_s3_bucket_website_configuration" "website" {
   }
 }
 
-resource "aws_cloudfront_origin_access_control" "website" {
-  name                              = "yong-ju.me"
-  description                       = "Allow CloudFront access to S3 bucket"
-  origin_access_control_origin_type = "s3"
-  signing_behavior                  = "always"
-  signing_protocol                  = "sigv4"
-}
-
-resource "aws_cloudfront_function" "website" {
-  name    = "yong-ju_me"
-  runtime = "cloudfront-js-1.0"
-  comment = "Redirect if the path ends with / or does not end with .html"
-
-  code = <<EOF
-function handler(event) {
-  var request = event.request;
-  var uri = request.uri;
-
-  if (uri.endsWith("/")) {
-    return {
-      statusCode: 301,
-      statusDescription: "Moved Permanently",
-      headers: {
-        location: {
-          value: uri + "index.html"
-        }
-      }
-    };
-  }
-
-  if (!uri.endsWith(".html")) {
-    return {
-      statusCode: 301,
-      statusDescription: "Moved Permanently",
-      headers: {
-        location: {
-          value: uri + ".html"
-        }
-      }
-    };
-  }
-
-  return request;
-}
-EOF
-}
-
 resource "aws_cloudfront_distribution" "website" {
   origin {
-    domain_name              = aws_s3_bucket.website.bucket_regional_domain_name
-    origin_access_control_id = aws_cloudfront_origin_access_control.website.id
-    origin_id                = aws_s3_bucket.website.id
+    domain_name = aws_s3_bucket.website.bucket_regional_domain_name
+
+    custom_header {
+      name  = "Referer"
+      value = random_string.referer.result
+    }
+
+    origin_id = aws_s3_bucket.website.id
   }
 
   enabled         = true
@@ -135,11 +126,6 @@ resource "aws_cloudfront_distribution" "website" {
       cookies {
         forward = "none"
       }
-    }
-
-    function_association {
-      event_type   = "viewer-request"
-      function_arn = aws_cloudfront_function.website.arn
     }
 
     viewer_protocol_policy = "redirect-to-https"
