@@ -98,6 +98,27 @@ resource "aws_s3_bucket_website_configuration" "website" {
   }
 }
 
+resource "aws_cloudfront_function" "website" {
+  name    = "RewriteDefaultIndexRequest"
+  runtime = "cloudfront-js-1.0"
+  comment = "Redirect if the path ends with / or does not end with .html"
+
+  code = <<EOF
+function handler(event) {
+  var request = event.request;
+  var uri = request.uri;
+
+  if (uri.endsWith("/")) {
+    request.uri += uri + "index.html";
+  } else if (!uri.includes(".")) {
+    request.uri += "/index.html";
+  }
+
+  return request;
+}
+EOF
+}
+
 resource "aws_cloudfront_distribution" "website" {
   origin {
     domain_name = aws_s3_bucket.website.bucket_regional_domain_name
@@ -126,6 +147,11 @@ resource "aws_cloudfront_distribution" "website" {
       cookies {
         forward = "none"
       }
+    }
+
+    function_association {
+      event_type   = "viewer-request"
+      function_arn = aws_cloudfront_function.website.arn
     }
 
     viewer_protocol_policy = "redirect-to-https"
