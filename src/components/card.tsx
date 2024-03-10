@@ -1,19 +1,15 @@
-import { createElement, ReactNode } from "react";
+import { JSX } from 'solid-js'
+import { Dynamic } from 'solid-js/web';
 
 interface CardProps {
   tagName: string;
-  children: ReactNode;
+  children?: JSX.Element;
   className?: string;
 }
 
 const Card = ({ tagName, className, children, ...restProps }: CardProps) =>
-  createElement(
-    tagName,
-    {
-      className: `bg-white shadow-lg ${className || ""}`,
-      ...restProps,
-    },
-    children
-  );
+  <Dynamic component={tagName} class={`bg-white shadow-lg ${className}`} {...restProps}>
+    {children}
+  </Dynamic>;
 
 export default Card;

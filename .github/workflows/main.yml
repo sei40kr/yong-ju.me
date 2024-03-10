@@ -19,16 +19,17 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: ap-northeast-1
 
-      - name: Setup Node
-        uses: actions/setup-node@v2
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v1
         with:
-          node-version: "16"
-          cache: "npm"
+          bun-version: 1.0.x
 
-      - run: npm ci
-      - run: npm run build
+      - name: Install dependencies
+        run: bun install --from-lockfile
+
+      - run: bun run build
 
       - name: Deploy
         run: |
-          aws s3 sync public s3://yong-ju.me
+          aws s3 sync .output/public s3://yong-ju.me
           aws cloudfront create-invalidation --distribution-id E3F8JFJOCQE7RG --paths '/*'

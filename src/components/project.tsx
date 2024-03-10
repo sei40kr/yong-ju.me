@@ -1,5 +1,5 @@
-import React from "react";
-import Card from "../components/card";
+import { For, Show } from "solid-js";
+import Card from "~/components/card";
 
 export interface ProjectProps {
   startYYYYMM: string;
@@ -36,7 +36,7 @@ const formatPeriodLength = (startYYYYMM: string, endYYYYMM: string) => {
 };
 
 const renderPeriod = (startYYYYMM: string, endYYYYMM: string | null) => (
-  <section className="mb-2 text-right text-base text-white/60">
+  <section class="mb-2 text-right text-base text-white/60">
     {formatYYYYMM(startYYYYMM)} –{" "}
     {endYYYYMM !== null ? formatYYYYMM(endYYYYMM) : "working"}
     {endYYYYMM !== null
@@ -46,43 +46,45 @@ const renderPeriod = (startYYYYMM: string, endYYYYMM: string | null) => (
 );
 
 const renderAccomplishments = (accomplishments: string[]) =>
-  0 < accomplishments.length ? (
-    <section className="mb-4">
-      <h4 className="mb-1 font-montserrat text-sm font-medium uppercase text-slate-500">
+  <Show when={0 < accomplishments.length}>
+    <section class="mb-4">
+      <h4 class="mb-1 font-montserrat text-sm font-medium uppercase text-slate-500">
         Accomplishments
       </h4>
       <ul>
-        {accomplishments.map((accomplishment, i) => (
-          <li
-            key={i}
-            className="text-base before:-ml-8 before:inline-block before:w-8 before:text-right before:text-slate-500 before:content-['・']"
-          >
-            {accomplishment}
-          </li>
-        ))}
+        <For each={accomplishments}>
+          {accomplishment => (
+            <li
+              class="text-base before:-ml-8 before:inline-block before:w-8 before:text-right before:text-slate-500 before:content-['・']"
+            >
+              {accomplishment}
+            </li>
+          )}
+        </For>
       </ul>
     </section>
-  ) : null;
+  </Show>;
 
 const Project = (props: ProjectProps) => (
   <Card tagName="article" className="mb-8 pb-1">
     <header
       role="banner"
-      className="mb-4 px-8 pb-4 pt-3 text-white"
-      style={{ backgroundColor: props.themeColor }}
+      class="mb-4 px-8 pb-4 pt-3 text-white"
+      style={{ "background-color": props.themeColor }}
     >
       {renderPeriod(props.startYYYYMM, props.endYYYYMM)}
-      <h3 className="mb-1 text-2xl font-bold">{props.name}</h3>
-      <p className="text-base">
+      <h3 class="mb-1 text-2xl font-bold">{props.name}</h3>
+      <p class="text-base">
         {props.company} / {props.workRole}
       </p>
     </header>
-    <main className="px-8">
-      <section className="mb-4 text-base">
+    <main class="px-8">
+      <section class="mb-4 text-base">
         <p>{props.description}</p>
       </section>
       {renderAccomplishments(props.accomplishments)}
     </main>
   </Card>
 );
+
 export default Project;

@@ -1,7 +1,11 @@
-import React, { ReactNode } from "react";
+import { JSX } from 'solid-js'
 
-const Container = ({ children }: { children: ReactNode }) => (
-  <main className="mx-auto px-8 lg:container">{children}</main>
+interface ContainerProps {
+  children?: JSX.Element;
+}
+
+const Container = ({ children }: ContainerProps) => (
+  <main class="mx-auto px-8 lg:container">{children}</main>
 );
 
 export default Container;
