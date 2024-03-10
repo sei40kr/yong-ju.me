@@ -50,6 +50,32 @@ const projects: ProjectObject[] = [
     description: "Frontend developer tools to improve product developers' productivities.",
     accomplishments: []
   },
+  {
+    startYYYYMM: "201610",
+    endYYYYMM: "201701",
+    name: "Domestic Datasync Framework",
+    company: "Works Applications Co., Ltd.",
+    workRole: "Frontend & Backend & Database Engineer",
+    themeColor: "#20334c",
+    description: "A domestic framework to sync data between RDB and Cassandra.",
+    accomplishments: [
+      { content: "Develop a distributed batch to sync data in bulk" },
+      { content: "Create a testing tool to enable the framework users to test their modules easily" },
+      { content: "Develop an useful feature to reproduce data-related issues in development environment" }
+    ]
+  },
+  {
+    startYYYYMM: "201608",
+    endYYYYMM: "201609",
+    name: "Employee Onboarding System Prototyping",
+    company: "Works Applications Co., Ltd.",
+    workRole: "Frontend Engineer",
+    themeColor: "#20334c",
+    description: "A prototype of an Employee Onboarding subsystem of an ERP product.",
+    accomplishments: [
+      { content: "Design & develop some mockup screens" }
+    ]
+  }
 ]
 
 const renderProjects = (projects: ProjectObject[]) => (
