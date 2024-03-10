@@ -108,7 +108,7 @@ function handler(event) {
   var request = event.request;
   var uri = request.uri;
 
-  if (uri === "/projects" || uri === "/skills") {
+  if (uri === "/" || uri === "/projects" || uri === "/skills") {
     request.uri = "/index.html";
   }
 
