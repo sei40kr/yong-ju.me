@@ -79,24 +79,22 @@ const projects: ProjectObject[] = [
 ]
 
 const renderProjects = (projects: ProjectObject[]) => (
-  <div class="my-8">
-    <For each={projects}>
-      {project => (
-        <Project
-          startYYYYMM={project.startYYYYMM}
-          endYYYYMM={project.endYYYYMM}
-          name={project.name}
-          company={project.company}
-          workRole={project.workRole}
-          themeColor={project.themeColor}
-          description={project.description}
-          accomplishments={project.accomplishments.map(
-            (accomplishment) => accomplishment.content
-          )}
-        />
-      )}
-    </For>
-  </div>
+  <For each={projects}>
+    {project => (
+      <Project
+        startYYYYMM={project.startYYYYMM}
+        endYYYYMM={project.endYYYYMM}
+        name={project.name}
+        company={project.company}
+        workRole={project.workRole}
+        themeColor={project.themeColor}
+        description={project.description}
+        accomplishments={project.accomplishments.map(
+          (accomplishment) => accomplishment.content
+        )}
+      />
+    )}
+  </For>
 );
 
 const Projects = () => (
