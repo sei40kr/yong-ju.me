@@ -16,7 +16,7 @@ const Projects = () => {
   const [data] = createResource(fetchData);
 
   return (
-    <div class="bg-gray-100">
+    <div class="bg-gray-100 pt-8 pb-8">
       <Show when={!data.loading} fallback="Loading">
         <Container>{renderProjects(data().projects)}</Container>
       </Show>
