@@ -4,11 +4,9 @@ My portfolio website.
 
 ## Languages & Frameworks
 
-- [GatsbyJS](https://www.gatsbyjs.org)
-  - [React](https://reactjs.org)
-- Linting by [ESLint](https://eslint.org) & [TypeScript ESLint](https://typescript-eslint.io)
-- Code formatting by [Prettier](https://prettier.io)
-- Continuous integrations by [Travis CI](https://travis-ci.com)
+- TypeScript
+- [SolidStart](https://start.solidjs.com/getting-started/what-is-solidstart)
+- [SolidJS](https://www.solidjs.com)
 
 ## Development
 
