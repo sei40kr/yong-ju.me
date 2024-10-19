@@ -11,7 +11,11 @@ export default function App() {
     <>
       <MetaProvider>
         <Link rel="preconnect" href="https://fonts.googleapis.com" />
-        <Link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
+        <Link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin=""
+        />
         <Link
           href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Noto+Sans:wght@400;700&family=Roboto+Slab:wght@300;400&display=swap"
           rel="stylesheet"
@@ -19,7 +23,7 @@ export default function App() {
         <Title>Seong Yong-ju | Software Engineer/Systems Architect</Title>
         <Jumbotron />
         <Router
-          root={props => (
+          root={(props) => (
             <>
               <Nav />
               <Suspense>{props.children}</Suspense>
