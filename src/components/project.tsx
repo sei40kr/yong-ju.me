@@ -2,87 +2,72 @@ import { For, Show } from "solid-js";
 import Card from "~/components/card";
 
 export interface ProjectProps {
-  startYYYYMM: string;
-  endYYYYMM: string | null;
-  name: string;
-  company: string;
-  workRole: string;
-  themeColor: string;
-  description: string;
-  accomplishments: string[];
+  name: string | null;
+  description: string | null;
+  highlights: string[];
+  startDate: Date | null;
+  endDate: Date | null;
+  roles: string[];
+  entity: string | null;
 }
 
-const formatYYYYMM = (strYYYYMM: string) => {
-  const yyyy = strYYYYMM.slice(0, 4);
-  const MM = strYYYYMM.slice(4, 6);
-
-  return `${yyyy}/${MM}`;
+const formatYearAndMonth = (date: Date) => {
+  return `${date.getFullYear()}/${date.getMonth() + 1}`;
 };
 
-const formatPeriodLength = (startYYYYMM: string, endYYYYMM: string) => {
-  const startYYYY = Number(startYYYYMM.slice(0, 4));
-  const startMM = Number(startYYYYMM.slice(4, 6));
-  const endYYYY = Number(endYYYYMM.slice(0, 4));
-  const endMM = Number(endYYYYMM.slice(4, 6));
-
-  const t = (endYYYY - startYYYY) * 12 + (endMM - startMM + 1);
-  const months = t % 12;
-  const years = (t - months) / 12;
-
-  return (
-    (years !== 0 ? `${years}y ` : "") +
-    (years === 0 || months !== 0 ? `${months}m` : "")
+const formatDuration = (startDate: Date, endDate: Date) => {
+  const diffMonths = Math.floor(
+    (endDate.getFullYear() - startDate.getFullYear()) * 12 +
+      (endDate.getMonth() - startDate.getMonth()),
   );
+  const months = diffMonths % 12;
+  const years = Math.floor(diffMonths / 12);
+  return `${years > 0 ? `${years}y ` : ""}${months}m`;
 };
 
-const renderPeriod = (startYYYYMM: string, endYYYYMM: string | null) => (
-  <section class="mb-2 text-right text-base text-white/60">
-    {formatYYYYMM(startYYYYMM)} –{" "}
-    {endYYYYMM !== null ? formatYYYYMM(endYYYYMM) : "working"}
-    {endYYYYMM !== null
-      ? "・" + formatPeriodLength(startYYYYMM, endYYYYMM)
-      : null}
-  </section>
-);
-
-const renderAccomplishments = (accomplishments: string[]) =>
-  <Show when={0 < accomplishments.length}>
-    <section class="mb-4">
-      <h4 class="mb-1 font-montserrat text-sm font-medium uppercase text-slate-500">
-        Accomplishments
-      </h4>
-      <ul>
-        <For each={accomplishments}>
-          {accomplishment => (
-            <li
-              class="text-base before:-ml-8 before:inline-block before:w-8 before:text-right before:text-slate-500 before:content-['・']"
-            >
-              {accomplishment}
-            </li>
-          )}
-        </For>
-      </ul>
-    </section>
-  </Show>;
-
-const Project = (props: ProjectProps) => (
+const Project = ({
+  name,
+  description,
+  highlights,
+  startDate,
+  endDate,
+  roles,
+  entity,
+}: ProjectProps) => (
   <Card tagName="article" className="mb-8 pb-1">
-    <header
-      role="banner"
-      class="mb-4 px-8 pb-4 pt-3 text-white"
-      style={{ "background-color": props.themeColor }}
-    >
-      {renderPeriod(props.startYYYYMM, props.endYYYYMM)}
-      <h3 class="mb-1 text-2xl font-bold">{props.name}</h3>
+    <header role="banner" class="mb-4 px-8 pb-4 pt-3 bg-gray-700 text-white">
+      <section class="mb-2 text-right text-base text-white/60">
+        {startDate ? `${formatYearAndMonth(startDate)} ` : ""}–
+        {` ${endDate ? formatYearAndMonth(endDate) : "working"}`}
+        {startDate && endDate ? "・" + formatDuration(startDate, endDate) : ""}
+      </section>
+      <h3 class="mb-1 text-2xl font-bold">{name}</h3>
       <p class="text-base">
-        {props.company} / {props.workRole}
+        {entity}
+        {entity && 0 < roles.length ? " / " : ""}
+        {roles.join(", ")}
       </p>
     </header>
     <main class="px-8">
       <section class="mb-4 text-base">
-        <p>{props.description}</p>
+        <p>{description}</p>
       </section>
-      {renderAccomplishments(props.accomplishments)}
+      <Show when={0 < highlights.length}>
+        <section class="mb-4">
+          <h4 class="mb-1 font-montserrat text-sm font-medium uppercase text-slate-500">
+            Accomplishments
+          </h4>
+          <ul>
+            <For each={highlights}>
+              {(highlight) => (
+                <li class="text-base before:-ml-8 before:inline-block before:w-8 before:text-right before:text-slate-500 before:content-['・']">
+                  {highlight}
+                </li>
+              )}
+            </For>
+          </ul>
+        </section>
+      </Show>
     </main>
   </Card>
 );
