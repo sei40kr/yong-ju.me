@@ -55,7 +55,7 @@ const Project = ({
       <Show when={0 < highlights.length}>
         <section class="mb-4">
           <h4 class="mb-1 font-montserrat text-sm font-medium uppercase text-slate-500">
-            Accomplishments
+            Highlights
           </h4>
           <ul>
             <For each={highlights}>
